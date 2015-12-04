@@ -2,6 +2,7 @@ var FeatureList = require('./components/feature.jsx');
 var Banner = require('./components/banner.jsx');
 var Menu = require('./components/menu.jsx');
 var Footer = require('./components/footer.jsx');
+var Summary = require('./components/SummaryTogglable.jsx');
 
 var FEATURES = [
   {
@@ -39,6 +40,7 @@ var App = React.createClass({render:function () {
   return (
     <div className='reactApp'>
       <Menu/>
+      <Summary anchors={ANCHORS} currentPage={currentPage} visible={true}/>
       <Banner/>
       <FeatureList features={FEATURES}/>
       <Footer/>
