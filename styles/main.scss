@@ -26,11 +26,14 @@ section {
 
 @media (orientation: portrait) {
 
+  $navHeight : 10vh;
+
   .mobile-menu {
     position: fixed;
-    height: 10vh;
-    top:90vh;
-    width:100%;
+    height: $navHeight;
+    top: auto;
+    bottom:0;
+    width:100vw;
     text-align:center;
 
   }
@@ -101,5 +104,14 @@ section {
     display:block;
     margin:auto;
     height:100%;
+  }
+  .summary-togglable {
+  margin:0;
+  padding:0;
+  position:fixed;
+  background-color: white;
+  bottom: $navHeight;
+  height:40vh;
+  width:50vw;
   }
 }

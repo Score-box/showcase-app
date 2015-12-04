@@ -7,7 +7,7 @@ var MenuItem = React.createClass({
     var style = {
       backgroundImage: urlify(this.props.data.url)
     }
-    return <div className='menu-item' style={style}/>
+    return <div onClick={this.props.onClick} className='menu-item' style={style}></div>
   }
 })
 
@@ -19,8 +19,14 @@ module.exports = React.createClass({
       '/images/ic_expand_less_black_48dp_1x.png',
       '/images/logoV12_center_256gold_transparent.png'
     ]
-    var inner = icons.map(function (url) {
-      return <MenuItem data={{url:url}}/>
+    var self = this;
+    var inner = icons.map(function (url, index) {
+      if (index==0) {
+        return <MenuItem onClick={self.props.toggleSummary} data={{url:url}}/>
+      }
+      else {
+        return <MenuItem onClick={function (){}} data={{url:url}}/>
+      }
     })
 
     return (

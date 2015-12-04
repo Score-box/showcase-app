@@ -36,17 +36,47 @@ var ANCHORS = [
   }
 ];
 
-var App = React.createClass({render:function () {
-  return (
-    <div className='reactApp'>
-      <Menu/>
-      <Summary anchors={ANCHORS} currentPage={currentPage} visible={true}/>
-      <Banner/>
-      <FeatureList features={FEATURES}/>
-      <Footer/>
-    </div>
-  );
-}});
+var App = React.createClass({
+  getInitialState: function () {
+    return {
+      pageList: [{
+        name: 'Score Box'
+      },{
+        name: FEATURES[0].title
+      },{
+        name: FEATURES[1].title
+      },{
+        name: 'More'
+      }],
+      currentPage: 0,
+      summaryTogglabe: {
+        visibility: false
+      },
+      menu: {}
+    }
+  },toggleSummary: function () {
+    this.setState({
+      summaryTogglabe: {
+        visibility: (this.state.summaryTogglabe.visibility) ? false : true
+      }
+    })
+  },render:function () {
+    return (
+      <div className='reactApp'>
+        <Menu toggleSummary={this.toggleSummary}/>
+        <Summary
+          anchors={this.state.pageList}
+          currentPage={this.state.currentPage}
+          visible={this.state.summaryTogglabe.visibility}/>
+        <Banner/>
+        <FeatureList features={FEATURES}/>
+        <Footer/>
+      </div>
+    );
+  }
+});
+
+
 
 ReactDOM.render(
   <App/>, document.getElementById('react-content')
