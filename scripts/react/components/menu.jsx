@@ -15,8 +15,8 @@ module.exports = React.createClass({
   render: function () {
     var icons = [
       '/images/ic_menu_black_48dp_1x.png',
-      '/images/ic_expand_more_black_48dp_1x.png',
       '/images/ic_expand_less_black_48dp_1x.png',
+      '/images/ic_expand_more_black_48dp_1x.png',
       '/images/logoV12_center_256gold_transparent.png'
     ]
     var self = this;
