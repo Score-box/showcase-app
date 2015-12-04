@@ -3,7 +3,7 @@ var Banner = require('./components/banner.jsx');
 var Menu = require('./components/menu.jsx');
 var Footer = require('./components/footer.jsx');
 
-var FEATURE = [
+var FEATURES = [
   {
     img: {
       src: '/images/ping_pong.png',
@@ -21,12 +21,26 @@ var FEATURE = [
   }
 ];
 
+var currentPage = 0;
+
+var ANCHORS = [
+  {
+    name: 'Score Box'
+  },{
+    name: FEATURES[0].title
+  },{
+    name: FEATURES[1].title
+  },{
+    name: 'More'
+  }
+];
+
 var App = React.createClass({render:function () {
   return (
     <div className='reactApp'>
       <Menu/>
       <Banner/>
-      <FeatureList features={FEATURE}/>
+      <FeatureList features={FEATURES}/>
       <Footer/>
     </div>
   );
