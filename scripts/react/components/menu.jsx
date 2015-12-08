@@ -10,7 +10,6 @@ var MenuItem = React.createClass({
     if (this.props.onClick == null) {
       style.opacity = 0.2
     }
-    console.log(this.props.onClick)
     return <div onClick={this.props.onClick} className='menu-item' style={style}></div>
   }
 })

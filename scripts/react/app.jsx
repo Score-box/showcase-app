@@ -11,14 +11,16 @@ var FEATURES = [
       alt:'Ping Pong'
     },
     title: 'Partagez vos plus belles victoires !',
-    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.'
+    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
+    id:'whatever'
   },{
     img: {
       src:'/images/ping_pong.png',
       alt:'Ping Pong'
     },
     title:'Géolocalisez vos adversaires !',
-    text:'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !'
+    text:'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id:'idem'
   }
 ];
 
@@ -26,13 +28,17 @@ var App = React.createClass({
   getInitialState: function () {
     var self = this;
     var pageList = [{
-        name: 'Score Box'
+        name: 'Score Box',
+        id: 'banner'
       },{
-        name: FEATURES[0].title
+        name: FEATURES[0].title,
+        id: FEATURES[0].id
       },{
-        name: FEATURES[1].title
+        name: FEATURES[1].title,
+        id: FEATURES[1].id
       },{
-        name: 'More'
+        name: 'More',
+        id: 'footer'
       }];
     var navList = pageList.map(function(page, index) {
       return function () {

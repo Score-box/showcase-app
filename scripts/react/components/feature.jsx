@@ -2,7 +2,7 @@
 var FeatureList = React.createClass({
   render: function () {
     var list = this.props.features.map( function (feature) {
-      return <FeatureItem key={feature.title} feature={feature}/>;
+      return <FeatureItem key={feature.id} feature={feature}/>;
     });
     return <div className="featureList">{list}</div>;
   }
@@ -12,7 +12,7 @@ var FeatureItem = React.createClass({
   render: function () {
     var feature = this.props.feature;
     return (
-      <div className='mobile-section'>
+      <div id={feature.id} className='mobile-section'>
         <div className='mobile-image-title'>
           <img className='mobile-image' src={R(feature.img.src)} alt={feature.img.alt}/>
         </div>

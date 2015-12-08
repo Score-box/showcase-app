@@ -1,3 +1,3 @@
 module.exports = React.createClass({render: function () {
-	return <div className='mobile-section'>Footer</div>;
+	return <div id='footer' className='mobile-section'>Footer</div>;
 }});
