@@ -1,6 +1,8 @@
 body {
   padding: 0;
   margin: 0;
+  overflow:hidden;
+
 }
 
 section {
@@ -39,7 +41,6 @@ section {
   }
   .mobile-section {
     height:100vh;
-
   }
   .menu-item {
     height:100%;

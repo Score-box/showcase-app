@@ -45,6 +45,7 @@ var App = React.createClass({
         self.setState ({
           currentPage: index
         })
+        $('html, body').animate({scrollTop:$('#'+page.id).offset().top},'slow');
       }
     })
     return {
