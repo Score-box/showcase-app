@@ -22,8 +22,6 @@ var FEATURES = [
   }
 ];
 
-var currentPage = 0;
-
 var ANCHORS = [
   {
     name: 'Score Box'
