@@ -12,7 +12,7 @@ var FeatureItem = React.createClass({
   render: function () {
     var feature = this.props.feature;
     return (
-      <div id={feature.id} className='mobile-section'>
+      <div id={feature.id} className='mobile-section mobile-page'>
         <div className='mobile-image-title'>
           <img className='mobile-image' src={R(feature.img.src)} alt={feature.img.alt}/>
         </div>

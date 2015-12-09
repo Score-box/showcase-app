@@ -98,7 +98,7 @@ var App = React.createClass({
     }
   },render:function () {
     return (
-      <div className='reactApp'>
+      <div className='reactApp mobile-scroll-wrapper'>
         <Menu toggleSummary={this.toggleSummary} up={this.navUp()} down={this.navDown()} toggleCta={this.toggleCta}/>
         <Summary
           anchors={this.state.pageList}
@@ -114,8 +114,6 @@ var App = React.createClass({
     );
   }
 });
-
-
 
 ReactDOM.render(
   <App/>, document.getElementById('react-content')

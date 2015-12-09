@@ -4,7 +4,7 @@ function urlify (url) {
 
 module.exports = React.createClass({render: function () {
 	return (
-      <div id='banner' className='page mobile-section'style={{backgroundImage: urlify('/images/sky.jpeg'), backgroundSize: 'cover'}}>
+      <div id='banner' className='page mobile-section mobile-page'style={{backgroundImage: urlify('/images/sky.jpeg'), backgroundSize: 'cover'}}>
         <div className='title'>
           SCORE BOX
         </div>
