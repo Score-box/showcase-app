@@ -1,0 +1,17 @@
+.m-flex-container-orient {
+  display:flex;
+}
+.m-flex-box-orient {
+  flex-shrink:0;
+}
+@media (orientation:portrait) {
+  .m-flex-container-orient {
+    flex-direction:column;
+  }  
+}
+@media (orientation:landscape) {
+  .m-flex-container-orient {
+    flex-direction:row;
+    flex-wrap:nowrap;
+  }
+}
