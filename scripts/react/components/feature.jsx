@@ -1,10 +1,23 @@
 
+var FeatureItemClass = [
+  'm-feature-item',
+  'm-page',
+  'm-flex-box-orient',
+  'm-flex-container-orient'
+].join(' ')
+
+var FeatureListClass = [
+  'm-feature-list',
+  'm-flex-box-orient',
+  'm-flex-container-orient'
+].join(' ')
+
 var FeatureList = React.createClass({
   render: function () {
     var list = this.props.features.map( function (feature) {
       return <FeatureItem key={feature.id} feature={feature}/>;
     });
-    return <div className="featureList">{list}</div>;
+    return <div className={FeatureListClass}>{list}</div>;
   }
 });
 
@@ -12,20 +25,25 @@ var FeatureItem = React.createClass({
   render: function () {
     var feature = this.props.feature;
     return (
-      <div id={feature.id} className='mobile-section mobile-page'>
-        <div className='mobile-image-title'>
-          <img className='mobile-image' src={R(feature.img.src)} alt={feature.img.alt}/>
-        </div>
-        <div className='mobile-up-left'>
-          <div className='mobile-catch-text'>
-          <b>{feature.title}</b>
+      <div
+        key={this.props.key}
+        id={feature.id}
+        className={FeatureItemClass}
+      >
+
+        <div className='m-feature-sub'>
+          <img className='m-feature-img' src={R(feature.img.src)} alt={feature.img.alt}/>
+          <div className='m-feature-title'>
+            <b>{feature.title}</b>
           </div>
         </div>
-        <div className='mobile-down-right'>
-          <div className='mobile-detail-text'>
+
+        <div className='m-feature-sub'>
+          <div className='m-feature-desc'>
             {feature.text}
           </div>
         </div>
+
       </div>
     );
   }

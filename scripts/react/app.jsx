@@ -25,6 +25,15 @@ var FEATURES = [
   }
 ];
 
+var AppClass = [
+  'reactApp'
+].join(' ')
+
+var ScrollerClass = [
+  'm-flex-container-orient',
+  'm-scroll-wrapper'
+].join(' ')
+
 var App = React.createClass({
   getInitialState: function () {
     var self = this;
@@ -98,8 +107,12 @@ var App = React.createClass({
     }
   },render:function () {
     return (
-      <div className='reactApp mobile-scroll-wrapper'>
-        <Menu toggleSummary={this.toggleSummary} up={this.navUp()} down={this.navDown()} toggleCta={this.toggleCta}/>
+      <div className={AppClass}>
+        <Menu
+          toggleSummary={this.toggleSummary}
+          up={this.navUp()}
+          down={this.navDown()}
+          toggleCta={this.toggleCta}/>
         <Summary
           anchors={this.state.pageList}
           currentPage={this.state.currentPage}
@@ -107,9 +120,15 @@ var App = React.createClass({
         <Cta
           visibility={this.state.ctaTogglable.visibility}
           currentPage={this.state.currentPage}/>
-        <Banner/>
-        <FeatureList features={FEATURES}/>
-        <Footer/>
+        <div
+          id='m-scroll-wrapper'
+          className={ScrollerClass}
+          data-page={this.state.currentPage}
+        >
+          <Banner/>
+          <FeatureList features={FEATURES}/>
+          <Footer/>
+        </div>
       </div>
     );
   }
