@@ -3,6 +3,7 @@ var Banner = require('./components/banner.jsx');
 var Menu = require('./components/menu.jsx');
 var Footer = require('./components/footer.jsx');
 var Summary = require('./components/SummaryTogglable.jsx');
+var Cta = require('./components/Cta.jsx');
 
 var FEATURES = [
   {
@@ -42,9 +43,15 @@ var App = React.createClass({
       }];
     var navList = pageList.map(function(page, index) {
       return function () {
-        self.setState ({
-          currentPage: index
-        })
+        var _state = {
+          currentPage: index,
+          ctaTogglable : {
+            visibility: (index == 0 || index == self.state.pageList.length - 1) ? true : false
+          }
+        }
+        self.setState (
+           _state
+        )
       }
     })
     return {
@@ -54,8 +61,17 @@ var App = React.createClass({
       summaryTogglabe: {
         visibility: false
       },
+    ctaTogglable : {
+      visibility: false
+    },
       menu: {}
     }
+  },toggleCta: function () {
+    this.setState({
+      ctaTogglable: {
+        visibility: (this.state.ctaTogglable.visibility) ? false : true
+      }
+    })
   },toggleSummary: function () {
     this.setState({
       summaryTogglabe: {
@@ -83,11 +99,14 @@ var App = React.createClass({
   },render:function () {
     return (
       <div className='reactApp'>
-        <Menu toggleSummary={this.toggleSummary} up={this.navUp()} down={this.navDown()}/>
+        <Menu toggleSummary={this.toggleSummary} up={this.navUp()} down={this.navDown()} toggleCta={this.toggleCta}/>
         <Summary
           anchors={this.state.pageList}
           currentPage={this.state.currentPage}
           visible={this.state.summaryTogglabe.visibility}/>
+        <Cta
+          visibility={this.state.ctaTogglable.visibility}
+          currentPage={this.state.currentPage}/>
         <Banner/>
         <FeatureList features={FEATURES}/>
         <Footer/>
