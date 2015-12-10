@@ -1,19 +1,15 @@
+var CTAClass = [
+  'cta-togglable'
+].join(' ')
+
 module.exports = React.createClass({
   render: function () {
-    var currentPage = this.props.currentPage
-  
-    var style = {}
-    
-  
-    if(currentPage === 0) {
-      style.visibility = 'visible' 
-    }else {
-      style.visibility = this.props.visibility ? 'visible' : 'hidden'
-    }
-    
-    
+    var visibility = this.props.visibility ? 'visible' : 'hidden'
     return (
-      <div className='cta-togglable' style={style}>
+      <div
+        className={CTAClass}
+        data-visibility={visibility}
+        >
         <h3>Découvrez notre beta en avant première </h3>
         <form action="#" method="POST">
           <fieldset>

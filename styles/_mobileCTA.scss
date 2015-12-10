@@ -1,11 +1,20 @@
 .cta-togglable {
-  margin-left:10vw;
-  padding:0 5vw;
+  margin-left: 10vw;
+  padding:5vh 5vw;
   position:fixed;
   background-color: white;
   bottom: 20vh;
   height:50vh;
-  width:80vw;
-  opacity: 0.6;
+  width:70vw;
   border-radius: 5px;
-  }	
+  z-index:1;
+}
+.cta-togglable[data-visibility="visible"] {
+  opacity:1;
+  transition:all 0.5s 0.2s;
+}
+.cta-togglable[data-visibility="hidden"] {
+  transform:translate(40vw, 40vh) scale(0.25);
+  opacity:0;
+  transition:all 0.2s 0s;
+}

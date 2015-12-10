@@ -71,7 +71,7 @@ var App = React.createClass({
         visibility: false
       },
     ctaTogglable : {
-      visibility: false
+      visibility: true
     },
       menu: {}
     }
