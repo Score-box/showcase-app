@@ -31,7 +31,7 @@ module.exports = React.createClass({
       } else if (index==2) {
         return <MenuItem onClick={self.props.down} data={{url:url}}/>
       } else {
-        return <MenuItem onClick={function (){}} data={{url:url}}/>
+        return <MenuItem onClick={self.props.toggleCta} data={{url:url}}/>
       }
     })
 
