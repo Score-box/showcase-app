@@ -1,20 +1,37 @@
-.cta-togglable {
-  margin-left: 10vw;
-  padding:5vh 5vw;
-  position:fixed;
-  background-color: white;
-  bottom: 20vh;
-  height:50vh;
-  width:70vw;
-  border-radius: 5px;
+.m-cta-togglable {
+
   z-index:1;
 }
-.cta-togglable[data-visibility="visible"] {
+.m-cta-togglable[data-visibility="visible"] {
   opacity:1;
   transition:all 0.5s 0.2s;
 }
-.cta-togglable[data-visibility="hidden"] {
+.m-cta-togglable[data-visibility="hidden"] {
   transform:translate(40vw, 40vh) scale(0.25);
   opacity:0;
   transition:all 0.2s 0s;
+}
+@media (orientation: landscape) {
+  .m-cta-togglable {
+    margin-left: 45vw;
+    padding:5vh 5vw;
+    position:fixed;
+    background-color: white;
+    bottom: 20vh;
+    height:25vw;
+    width:35vw;
+    border-radius: 5px;
+  }
+}
+@media (orientation: portrait) {
+  .m-cta-togglable {
+    margin-left: 10vw;
+    padding:5vh 5vw;
+    position:fixed;
+    background-color: white;
+    bottom: 20vh;
+    height:50vh;
+    width:70vw;
+    border-radius: 5px;
+  }
 }

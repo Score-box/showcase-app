@@ -1,5 +1,5 @@
 var CTAClass = [
-  'cta-togglable'
+  'm-cta-togglable'
 ].join(' ')
 
 module.exports = React.createClass({
