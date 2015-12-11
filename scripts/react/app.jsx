@@ -118,8 +118,7 @@ var App = React.createClass({
           currentPage={this.state.currentPage}
           visible={this.state.summaryTogglabe.visibility}/>
         <Cta
-          visibility={this.state.ctaTogglable.visibility}
-          currentPage={this.state.currentPage}/>
+          visible={this.state.ctaTogglable.visibility}/>
         <div
           id='m-scroll-wrapper'
           className={ScrollerClass}

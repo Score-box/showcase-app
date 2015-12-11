@@ -4,7 +4,7 @@ var CTAClass = [
 
 module.exports = React.createClass({
   render: function () {
-    var visibility = this.props.visibility ? 'visible' : 'hidden'
+    var visibility = this.props.visible ? 'visible' : 'hidden'
     return (
       <div
         className={CTAClass}
