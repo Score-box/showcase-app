@@ -1,10 +1,11 @@
-@import 'mobileFlex';
+/*@import 'mobileFlex';
 @import 'mobileScrollTransitions';
 @import 'mobileMenu';
 @import 'mobileCTA';
 @import 'mobileBanner';
 @import 'mobileFeatures';
-@import 'mobileFooter';
+@import 'mobileFooter';*/
+@import 'compat.scss';
 
 body {
   padding: 0;
