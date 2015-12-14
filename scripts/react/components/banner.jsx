@@ -3,20 +3,18 @@ function urlify (url) {
 }
 
 var BannerClass = [
-  'compat-banner'
+
 ].join(' ')
 
 module.exports = React.createClass({render: function () {
 	return (
-    <div id='m-banner'
-      className={BannerClass}
-      style={{
-        backgroundImage: urlify('/images/sky.jpeg'),
-        backgroundSize: 'cover'
-      }}
-    ><div className=''>
-        SCORE BOX
-      </div>
+    <div id=''className={BannerClass}>
+			<div className=''>
+        		SCORE BOX
+      		</div>
+      		<div className=''>
+        		<img src="images/logoV12_center_256gold_transparent.png"/>
+      		</div>
     </div>
 	);
 }});

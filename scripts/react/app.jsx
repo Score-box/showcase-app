@@ -22,6 +22,22 @@ var FEATURES = [
     title:'Géolocalisez vos adversaires !',
     text:'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
     id:'idem'
+  },{
+    img: {
+      src: '/images/ping_pong.png',
+      alt:'Ping Pong'
+    },
+    title: 'Partagez vos plus belles victoires !',
+    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
+    id:'3'
+  },{
+    img: {
+      src:'/images/ping_pong.png',
+      alt:'Ping Pong'
+    },
+    title:'Géolocalisez vos adversaires !',
+    text:'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id:'4'
   }
 ];
 
@@ -107,9 +123,19 @@ var App = React.createClass({
   },render:function () {
     return (
       <div className={AppClass}>
-          <Banner/>
-          <FeatureList features={FEATURES}/>
-          <Footer/>
+		<div className="compat-container" id="banner">
+				<div className="compat-page">
+          			<Banner/>
+				</div>
+				<div className="compat-page">
+          			<Cta/>
+				</div>
+				<div className="compat-page">
+					<img src="/images/ping_pong.png"/>
+				</div>
+		</div>
+        <FeatureList features={FEATURES}/>
+        <Footer/>
       </div>
     );
   }

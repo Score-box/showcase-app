@@ -1,0 +1,154 @@
+$pageWidth : 400px;
+$pageHeight : 600px;
+
+body.compat {
+  overflow: visible;
+}
+
+#react-content {
+  position:inherit;
+  text-align: center;
+}
+
+#banner {
+  background-image: url('/images/sky.jpeg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+
+
+@media (min-width: 3 * $pageWidth) {
+	.compat-container {
+		 width: 1200px;
+		min-height: 400px;
+		 margin: 0 auto;
+        overflow:hidden;
+        position: relative;
+	  }
+	.compat-page {
+		width: 350px;
+		height: 400px;
+		float: left;
+		.sub-page {
+			min-height: 300px;
+			max-height: 400px;
+	}
+		img {
+			width: 75px;
+			height: 75px;
+		}
+	}
+}
+
+@media (max-width: $pageWidth ) {
+	.compat-container {
+		width: 100%;
+	}
+}
+
+/*
+
+
+
+@media (min-width: 4 * $pageWidth) {
+  .compat-container {
+     width: 1600px;
+  }
+  .compat-page {
+    float: left;
+    width: 600px;
+  }
+}
+
+
+@media (min-width: 3 * $pageWidth) {
+
+  .compat-container {
+    width: 1200px;
+    margin: 0 auto;
+    overflow:hidden;
+    position: relative;
+  }
+  .compat-page {
+    float: left;
+    width: 400px;
+    min-width: 400px;
+  }
+}
+
+@media (min-width: 2 * $pageWidth ) {
+  .compat-container {
+    width: 800px;
+  }
+  .compat-page {
+    float: left;
+    width: 800 / 3 px;
+    min-width: 800 / 3 px;
+  }
+}
+
+
+@media (max-width:600px) {
+    #banner {
+    background-size: auto 600px;
+  }
+}
+
+
+@media (min-width: $pageWidth ) {
+  .compat-container {
+    width: 400px;
+  }
+  .compat-page {
+    width: 100%;
+  }
+}
+
+@media (max-width: $pageWidth) {
+	.compat-container {
+		width: 100%;
+	}
+}
+
+
+
+
+
+#banner {
+  background-image: url('/images/sky.jpeg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.compat-page {
+  min-height: $pageHeight;
+  height: 100%;
+  margin-top: 20px;
+	.sub-page {
+		min-height: 300px;
+		max-height: 400px;
+	}
+
+}
+
+
+
+.compat-Cta {
+
+}
+
+.compat-feature {
+  .compat-feature-img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
+ }
+}
+
+.compat-footer {
+  display: inline-block;
+  width: 100%;
+  background-color: red;
+}*/
+

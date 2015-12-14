@@ -1,10 +1,11 @@
 
 var FeatureItemClass = [
-  'compat-feature'
+  'compat-feature',
+  'compat-page'
 ].join(' ')
 
 var FeatureListClass = [
-
+  'compat-container'
 ].join(' ')
 
 var FeatureList = React.createClass({
@@ -26,16 +27,16 @@ var FeatureItem = React.createClass({
         className={FeatureItemClass}
       >
 
-        <div className=''>
+        <div className='sub-page'>
           <img className='compat-feature-img' src={R(feature.img.src)} alt={feature.img.alt}/>
-          <div className=''>
+          <div className='compat-feature-title'>
             <b>{feature.title}</b>
           </div>
         </div>
 
-        <div className=''>
-          <div className=''>
-            {feature.text}
+        <div className='sub-page'>
+          <div className='compat-feature-content'>
+            <p>{feature.text}</p>
           </div>
         </div>
 

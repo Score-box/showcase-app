@@ -1,5 +1,6 @@
 var FooterClass = [
-  'compat-footer'
+  'compat-footer',
+  'compat-container'
 ].join(' ')
 
 module.exports = React.createClass({
