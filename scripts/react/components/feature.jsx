@@ -1,6 +1,6 @@
 
 var FeatureItemClass = [
-  'test-page'
+  'compat-feature'
 ].join(' ')
 
 var FeatureListClass = [
@@ -27,7 +27,7 @@ var FeatureItem = React.createClass({
       >
 
         <div className=''>
-          <img className='test-img' src={R(feature.img.src)} alt={feature.img.alt}/>
+          <img className='compat-feature-img' src={R(feature.img.src)} alt={feature.img.alt}/>
           <div className=''>
             <b>{feature.title}</b>
           </div>

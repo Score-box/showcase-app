@@ -3,7 +3,7 @@ function urlify (url) {
 }
 
 var BannerClass = [
-
+  'compat-banner'
 ].join(' ')
 
 module.exports = React.createClass({render: function () {

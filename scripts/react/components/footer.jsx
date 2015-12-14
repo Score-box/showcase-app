@@ -1,5 +1,5 @@
 var FooterClass = [
-
+  'compat-footer'
 ].join(' ')
 
 module.exports = React.createClass({
@@ -7,7 +7,7 @@ module.exports = React.createClass({
     return (
       <div
         id='footer'
-        className=''
+        className={FooterClass}
       >
         Footer
       </div>
