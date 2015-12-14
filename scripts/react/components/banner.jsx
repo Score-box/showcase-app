@@ -3,10 +3,7 @@ function urlify (url) {
 }
 
 var BannerClass = [
-  'm-banner',
-  'm-page',
-  'm-flex-box-orient',
-  'm-flex-container-orient'
+
 ].join(' ')
 
 module.exports = React.createClass({render: function () {
@@ -17,7 +14,7 @@ module.exports = React.createClass({render: function () {
         backgroundImage: urlify('/images/sky.jpeg'),
         backgroundSize: 'cover'
       }}
-    ><div className='m-banner-title'>
+    ><div className=''>
         SCORE BOX
       </div>
     </div>

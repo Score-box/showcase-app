@@ -1,15 +1,10 @@
 
 var FeatureItemClass = [
-  'm-feature-item',
-  'm-page',
-  'm-flex-box-orient',
-  'm-flex-container-orient'
+  'test-page'
 ].join(' ')
 
 var FeatureListClass = [
-  'm-feature-list',
-  'm-flex-box-orient',
-  'm-flex-container-orient'
+
 ].join(' ')
 
 var FeatureList = React.createClass({
@@ -31,15 +26,15 @@ var FeatureItem = React.createClass({
         className={FeatureItemClass}
       >
 
-        <div className='m-feature-sub'>
-          <img className='m-feature-img' src={R(feature.img.src)} alt={feature.img.alt}/>
-          <div className='m-feature-title'>
+        <div className=''>
+          <img className='test-img' src={R(feature.img.src)} alt={feature.img.alt}/>
+          <div className=''>
             <b>{feature.title}</b>
           </div>
         </div>
 
-        <div className='m-feature-sub'>
-          <div className='m-feature-desc'>
+        <div className=''>
+          <div className=''>
             {feature.text}
           </div>
         </div>

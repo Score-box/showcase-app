@@ -36,7 +36,7 @@ module.exports = React.createClass({
     })
 
     return (
-      <div className='mobile-menu'>{inner}</div>
+      <div className='s'>{inner}</div>
     );
   }
 });

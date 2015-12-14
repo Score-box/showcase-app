@@ -1,6 +1,5 @@
 var FooterClass = [
-  'm-page',
-  'm-flex-box-orient'
+
 ].join(' ')
 
 module.exports = React.createClass({
@@ -8,7 +7,7 @@ module.exports = React.createClass({
     return (
       <div
         id='footer'
-        className='mobile-page'
+        className=''
       >
         Footer
       </div>

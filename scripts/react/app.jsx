@@ -30,8 +30,7 @@ var AppClass = [
 ].join(' ')
 
 var ScrollerClass = [
-  'm-flex-container-orient',
-  'm-scroll-wrapper'
+
 ].join(' ')
 
 var App = React.createClass({
@@ -108,26 +107,9 @@ var App = React.createClass({
   },render:function () {
     return (
       <div className={AppClass}>
-        <Menu
-          toggleSummary={this.toggleSummary}
-          up={this.navUp()}
-          down={this.navDown()}
-          toggleCta={this.toggleCta}/>
-        <Summary
-          anchors={this.state.pageList}
-          currentPage={this.state.currentPage}
-          visible={this.state.summaryTogglabe.visibility}/>
-        <Cta
-          visible={this.state.ctaTogglable.visibility}/>
-        <div
-          id='m-scroll-wrapper'
-          className={ScrollerClass}
-          data-page={this.state.currentPage}
-        >
           <Banner/>
           <FeatureList features={FEATURES}/>
           <Footer/>
-        </div>
       </div>
     );
   }
