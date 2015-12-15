@@ -11,10 +11,10 @@ module.exports = React.createClass({
         className={CTAClass}
         data-visibility={visibility}
         >
-			<div class="sub-page">
+			<div className="sub-page">
         		<h3>Découvrez notre beta en avant première </h3>
 			</div>
-			<div class="sub-page">
+			<div className="sub-page">
 				<form action="#" method="POST">
 				  <fieldset>
 					<input type="email" id="email" placeholder="Email" required autofocus></input>

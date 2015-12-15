@@ -38,6 +38,22 @@ var FEATURES = [
     title:'Géolocalisez vos adversaires !',
     text:'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
     id:'4'
+  },{
+    img: {
+      src: '/images/ping_pong.png',
+      alt:'Ping Pong'
+    },
+    title: 'Partagez vos plus belles victoires !',
+    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
+    id:'5'
+  },{
+    img: {
+      src:'/images/ping_pong.png',
+      alt:'Ping Pong'
+    },
+    title:'Géolocalisez vos adversaires !',
+    text:'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id:'6'
   }
 ];
 
@@ -123,20 +139,30 @@ var App = React.createClass({
   },render:function () {
     return (
       <div className={AppClass}>
-		<div className="compat-container" id="banner">
-				<div className="compat-page">
-          			<Banner/>
-				</div>
-				<div className="compat-page">
-          			<Cta/>
-				</div>
-				<div className="compat-page">
-					<img src="/images/ping_pong.png"/>
-				</div>
-		</div>
-        <FeatureList features={FEATURES}/>
-        <Footer/>
-      </div>
+        <div className="compat-wrapper" id="banner">
+          <div className="compat-container">
+            <div className="compat-page">
+              <Banner/>
+            </div>
+            <div className="compat-page">
+              <Cta/>
+            </div>
+            <div className="compat-page">
+              <img src="/images/ping_pong.png"/>
+            </div>
+          </div>
+        </div>
+        <div className="compat-wrapper">
+          <div className="compat-container">
+            <FeatureList features={FEATURES}/>
+          </div>
+        </div>
+        <div className="compat-wrapper" id="footer">
+          <div className="compat-container">
+            <Footer/>
+          </div>
+        </div>
+    </div>
     );
   }
 });

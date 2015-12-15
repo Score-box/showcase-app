@@ -9,10 +9,10 @@ var BannerClass = [
 module.exports = React.createClass({render: function () {
 	return (
     <div id=''className={BannerClass}>
-			<div className=''>
+			<div className='sub-page'>
         		SCORE BOX
       		</div>
-      		<div className=''>
+      		<div className='sub-page'>
         		<img src="images/logoV12_center_256gold_transparent.png"/>
       		</div>
     </div>

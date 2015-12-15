@@ -10,7 +10,9 @@ module.exports = React.createClass({
         id='footer'
         className={FooterClass}
       >
-        Footer
+        <div className="compat-page"></div>
+        <div className="compat-page"></div>
+        <div className="compat-page"></div>
       </div>
       );
   }
