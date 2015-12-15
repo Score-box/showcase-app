@@ -144,18 +144,14 @@ var App = React.createClass({
             <div className="compat-page">
               <Banner/>
             </div>
-            <div className="compat-page">
               <Cta/>
-            </div>
             <div className="compat-page">
               <img src="/images/ping_pong.png"/>
             </div>
           </div>
         </div>
         <div className="compat-wrapper">
-          <div className="compat-container">
             <FeatureList features={FEATURES}/>
-          </div>
         </div>
         <div className="compat-wrapper" id="footer">
           <div className="compat-container">

@@ -33,74 +33,158 @@ img {
   overflow:hidden;
   position: relative;
 }
+
+
 .compat-page {
   width: 100%;
   height: $pageDim * 2/3;
 }
+
 .sub-page {
-    max-height: ($pageDim * 2/3) / 2;
+  max-height: ($pageDim * 2/3) / 2;
 }
+
 .sub-page:nth-child(2) {
-      margin-top: 30px;
-}
-
-.compat-feature:first-child {
-    margin-top: 50px;
+  margin-top: 30px;
 }
 
 
-@media (min-width: $pageDim) {
 
-  .compat-container {
-     width: $pageDim;
-  }
-  .compat-page {
-    width: $pageDim ;
-    height: $pageDim / 2;
-    margin-top: 50px;
-  }
-  .sub-page {
-    max-height: ($pageDim - 50px) / 2;
-  }
-
-}
-
-
-@media (min-width: 2 * $pageDim) {
-  .compat-container {
-     width: 2 * $pageDim;
-  }
-  .compat-page {
-    width: (2/3 * $pageDim) - 50px;
-    height: $pageDim - 50px;
-    float: left;
-    margin-top: 50px;
-    margin-left: 50px;
-    img {
-      width: ($pageDim - 50px) / 3;
-      height: ($pageDim - 50px) / 3;
+@media (orientation: landscape) {
+  @media (min-width: $pageDim){
+    .compat-page {
+      height: $pageDim * 6/7;
+      width: $pageDim;
+      margin: 0 auto;
+    }
+    .sub-page {
+      float: left;
+      width: $pageDim / 2 - 20px;
+    }
+    .sub-page:first-child {
+      margin-right: 40px;
+      margin-top: 100px;
+    }
+    .sub-page:nth-child(2) {
+      margin-top: 100px;
     }
   }
-  .sub-page {
-      max-height: ($pageDim - 75px) / 2;
+  @media (min-width: 2 * $pageDim) {
+    .compat-container {
+      width: 2 * $pageDim;
+      margin: 0 auto;
     }
-  .sub-page:nth-child(2) {
-    margin-top: 25px;
+    .compat-page {
+      width: $pageDim ; /***/
+      float: left;
+    }
+    .sub-page {
+      float: left;
+    }
+    #banner {
+      .compat-page:last-child{
+        position: relative;
+        left: 200px;
+      }
+    }
+  }
+  
+  @media (min-width: 3 * $pageDim) {
+
+    .compat-container {
+       width: 3 * $pageDim;
+    }
+    .compat-page {
+      width: 3/2 * $pageDim - 50px;
+      height: $pageDim - 50px;
+      float: left;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    #banner {
+      .compat-page:last-child{
+        position: relative;
+        left: 300px;
+      }
+    }
+    .sub-page {
+      float: left;
+    }
+  }
+  @media (min-width: 4 * $pageDim) {
+    .compat-container {
+       width: 4 * $pageDim;
+    }
+    .compat-page {
+      width: 4/3 * $pageDim - 50px;
+      height: 4/3 * $pageDim - 50px;
+      float: left;
+      margin-top: 50px;
+      margin-left: 50px;
+      text-align: center;
+    }
+    .sub-page {
+      float: none;
+    }
+    .compat-feature {
+      .compat-imgWrapper, .compat-feature-title, .compat-feature-content {
+        position: relative;
+        left: 160px;
+      }
+    }
   }
 }
 
 
-@media (min-width: 3 * $pageDim) {
 
-  .compat-container {
-     width: 3 * $pageDim;
+@media (orientation: portrait){
+  @media (min-width: $pageDim){
+    .compat-container {
+       width: $pageDim;
+    }
+    .compat-page {
+      width: $pageDim ;
+      height: $pageDim / 2;
+      margin-top: 50px;
+    }
+    .sub-page {
+      max-height: ($pageDim - 50px) / 2;
+    }
   }
-  .compat-page {
-    width: $pageDim - 50px;
-    height: $pageDim - 50px;
-    float: left;
-    margin-top: 50px;
-    margin-left: 50px;
+  
+  @media (min-width: 2 * $pageDim) {
+    .compat-container {
+       width: 2 * $pageDim;
+    }
+    .compat-page {
+      width: $pageDim - 50px;
+      height: $pageDim - 50px;
+      float: left;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    .sub-page {
+        max-height: ($pageDim - 75px) / 2;
+      }
+    .sub-page:nth-child(2) {
+      margin-top: 25px;
+    }
+  }
 
+  @media (min-width: 3 * $pageDim) {
+
+    .compat-container {
+       width: 3 * $pageDim;
+    }
+    .compat-page {
+      width: $pageDim - 50px;
+      height: $pageDim - 50px;
+      float: left;
+      margin-top: 50px;
+      margin-left: 50px;
+
+    }
   }
 }
+
+

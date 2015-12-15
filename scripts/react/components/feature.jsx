@@ -28,7 +28,9 @@ var FeatureItem = React.createClass({
       >
 
         <div className='sub-page'>
-          <img className='compat-feature-img' src={R(feature.img.src)} alt={feature.img.alt}/>
+          <div className="compat-imgWrapper">
+            <img className='compat-feature-img' src={R(feature.img.src)} alt={feature.img.alt}/>
+          </div>
           <div className='compat-feature-title'>
             <b>{feature.title}</b>
           </div>
