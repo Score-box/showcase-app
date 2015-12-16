@@ -44,10 +44,9 @@ img {
   margin-top: 30px;
 }
 
-#compat-smBanner {
+#banner {
   background-image: url('/images/sky.jpeg');
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 
@@ -72,6 +71,16 @@ img {
     .sub-page:nth-child(2) {
       margin-top: 100px;
     }
+    .compat-Cta {
+      .sub-page {
+        float: none;
+        margin: 0 auto;
+        width: 2/3 * $pageDim;
+      }
+    }
+    #banner {
+      background-size: 100% $pageDim * 6/7;
+    }
   }
   
   @media (min-width: 2 * $pageDim) {
@@ -87,12 +96,7 @@ img {
       float: none;
     }
     #banner {
-      background-image: url('/images/sky.jpeg');
-      background-repeat: no-repeat;
       background-size: cover;
-    }
-    #compat-smBanner {
-      background: none;
     }
   }
   
@@ -147,6 +151,9 @@ img {
       height: $pageDim / 2;
       margin-top: 50px;
     }
+    #banner {
+      background-size: 100% $pageDim / 2;
+    }
     .sub-page {
       max-height: ($pageDim - 50px) / 2;
     }
@@ -170,16 +177,11 @@ img {
       margin-top: 25px;
     }
     #banner {
-      background-image: url('/images/sky.jpeg');
-      background-repeat: no-repeat;
       background-size: cover;
       img {
         position: relative;
         left: 200px;
       }
-    }
-    #compat-smBanner {
-      background: none;
     }
   }
 

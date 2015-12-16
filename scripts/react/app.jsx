@@ -141,11 +141,9 @@ var App = React.createClass({
       <div className={AppClass}>
         <div className="compat-wrapper" id="banner">
           <div className="compat-container">
-            <div id="compat-smBanner">
               <div className="compat-page">
                 <Banner/>
               </div>
-            </div>
             <Cta/>
             <div className="compat-page">
               <img src="/images/ping_pong.png"/>
