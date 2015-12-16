@@ -47,6 +47,7 @@ img {
 #banner {
   background-image: url('/images/sky.jpeg');
   background-repeat: no-repeat;
+  background-size: 100% $pageDim * 2/3;
 }
 
 
