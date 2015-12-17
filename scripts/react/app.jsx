@@ -146,7 +146,9 @@ var App = React.createClass({
               </div>
             <Cta/>
             <div className="compat-page">
-              <img src="/images/ping_pong.png"/>
+              <div className="compat-mockWrapper">
+                <img src="/images/mockup-test.png"/>
+              </div>
             </div>
           </div>
         </div>

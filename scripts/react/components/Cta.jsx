@@ -12,7 +12,7 @@ module.exports = React.createClass({
         data-visibility={visibility}
         >
       <div className="sub-page">
-            <h3>Découvrez notre beta en avant première </h3>
+            <h2>Découvrez notre beta en avant première </h2>
       </div>
       <div className="sub-page">
         <form action="#" method="POST">

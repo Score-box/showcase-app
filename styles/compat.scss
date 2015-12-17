@@ -9,15 +9,21 @@ body.compat {
   text-align: center;
 }
 
-
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.25em;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-size: 1.2em;
+}
 
 #footer {
   background-color: #1a2127;
-}
-
-img {
-  width: 75px;
-  height: 75px;
 }
 
 .compat-wrapper {
@@ -30,47 +36,60 @@ img {
   position: relative;
 }
 
-
 .compat-page {
   width: 100%;
-  height: $pageDim * 2/3;
+  height: 5/4 * $pageDim;
 }
 
 .sub-page {
-  max-height: ($pageDim * 2/3) / 2;
+  height: $pageDim * 5/8;
 }
 
-.sub-page:nth-child(2) {
-  margin-top: 30px;
-}
+
 
 #banner {
   background-image: url('/images/sky.jpeg');
   background-repeat: no-repeat;
-  background-size: 100% $pageDim * 2/3;
+  background-size: 100% 5/4 * $pageDim;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
+.compat-logoWrapper {
+  max-width: 100px;
+  margin: 0 auto;
+}
+.compat-imgFeatWrapper {
+  margin: 0 auto;
+  max-width: 100px;
+}
+.compat-mockWrapper {
+  margin: 0 auto;
+  max-width: 125px;
+}
 
 
 @media (orientation: landscape) {
   
   @media (min-width: $pageDim){
     .compat-page {
-      height: $pageDim * 6/7;
       width: $pageDim;
       margin: 0 auto;
     }
     .sub-page {
       float: left;
-      width: $pageDim / 2 - 20px;
     }
-    .sub-page:first-child {
-      margin-right: 40px;
-      margin-top: 100px;
-    }
-    .sub-page:nth-child(2) {
-      margin-top: 100px;
+    .compat-feature {
+     .sub-page {
+      float: left;
+      width: $pageDim / 2 - $pageDim / 40;
+     }
+      .sub-page:first-child {
+        margin-right: $pageDim / 20;
+      }
     }
     .compat-Cta {
       .sub-page {
@@ -82,6 +101,12 @@ img {
     #banner {
       background-size: 100% $pageDim * 6/7;
     }
+    .compat-imgFeatWrapper {
+      max-width: 75px;
+    }
+    .compat-mockWrapper {
+      max-width: 150px;
+    }
   }
   
   @media (min-width: 2 * $pageDim) {
@@ -90,14 +115,36 @@ img {
     }
     .compat-page {
       width: 2/3 * $pageDim ;
-      height: 4/3 * $pageDim;
       float: left;
+      margin-top: 30px;
     }
+    
+    .compat-feature {
+      width: 2/3 * $pageDim - $pageDim * 2/15;
+     .sub-page {
+      float: none;
+      width: 100%;
+     }
+      .sub-page:first-child {
+        margin-right: 0px;
+      }
+    }
+    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
+        margin-right: $pageDim / 5;
+      }
     .sub-page {
       float: none;
+      width: 100%;
     }
     #banner {
       background-size: cover;
+    }
+    .compat-imgFeatWrapper {
+      max-width: 75px;
+    }
+    .compat-mockWrapper {
+      position: relative;
+      top: 260px;
     }
   }
   
@@ -107,15 +154,18 @@ img {
        width: 3 * $pageDim;
     }
     .compat-page {
-      width: $pageDim - 50px;
-      height: $pageDim;
+      width: $pageDim;
       float: left;
-      margin-top: 30px;
-      margin-left: 50px;
     }
-    .sub-page, .sub-page:first-child, .sub-page:nth-child(2) { /***/
-      float: none;
-      margin: 0;
+    .compat-feature {
+      width: $pageDim * 13/15;
+    }
+    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
+        margin-right: $pageDim / 5;
+    }
+    .compat-mockWrapper {
+      max-width: 250px;
+      top: 130px;
     }
   }
   
@@ -124,23 +174,21 @@ img {
        width: 4 * $pageDim;
     }
     .compat-page {
-      width: 4/3 * $pageDim - 50px;
-      height: 4/3 * $pageDim - 50px;
+      width: 4/3 * $pageDim;
       float: left;
-      margin-top: 50px;
-      margin-left: 50px;
-      text-align: center;
+      margin-top: 30px;
     }
     .compat-feature {
-      .compat-imgWrapper, .compat-feature-title, .compat-feature-content {
-        position: relative;
-        left: 160px;
-      }
+      width: 7/6 * $pageDim;
+    }
+    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
+        margin-right: $pageDim / 4;
+      color: red;
     }
   }
 }
 
-
+/**************************************************************************/
 
 @media (orientation: portrait){
   @media (min-width: $pageDim){
@@ -149,41 +197,42 @@ img {
     }
     .compat-page {
       width: $pageDim ;
-      height: $pageDim / 2;
-      margin-top: 50px;
     }
-    #banner {
-      background-size: 100% $pageDim / 2;
-    }
-    .sub-page {
-      max-height: ($pageDim - 50px) / 2;
-    }
+    .compat-mockWrapper {
+      max-width: $pageDim / 2;
   }
+    
+}
   
   @media (min-width: 2 * $pageDim) {
     .compat-container {
        width: 2 * $pageDim;
     }
     .compat-page {
-      width: $pageDim - 50px;
-      height: $pageDim - 50px;
+      width: $pageDim;
       float: left;
       margin-top: 50px;
-      margin-left: 50px;
     }
-    .sub-page {
-        max-height: ($pageDim - 75px) / 2;
-      }
-    .sub-page:nth-child(2) {
-      margin-top: 25px;
+    .compat-feature {
+      width: 9/10 * $pageDim;
     }
+    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
+      margin-right: $pageDim / 10;
+    }
+
     #banner {
       background-size: cover;
-      img {
-        position: relative;
-        left: 200px;
-      }
     }
+    .compat-mockWrapper {
+      max-width: 250px;
+      position: relative;
+      left: $pageDim * 1/2;
+      top: 120px;
+    }
+    .compat-imgFeatWrapper {
+      max-width: 150px;
+    }
+
   }
 
   @media (min-width: 3 * $pageDim) {
@@ -192,16 +241,19 @@ img {
        width: 3 * $pageDim;
     }
     .compat-page {
-      width: $pageDim - 50px;
-      height: $pageDim - 50px;
+      width: $pageDim;
       float: left;
-      margin-top: 50px;
-      margin-left: 50px;
     }
-    #banner {
-      img {
-        position: static;
-      }
+    .compat-feature {
+      width: 28/30 * $pageDim;
+    }
+    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
+      margin-right: $pageDim / 10;
+    }
+    .compat-mockWrapper {
+      max-width: 250px;
+      top: 120px;
+      left: 0px;
     }
   }
 
@@ -210,13 +262,18 @@ img {
        width: 4 * $pageDim;
     }
     .compat-page {
-      width: 4/3 * $pageDim - 50px;
-      height: $pageDim - 50px;
-      float: left;
-      margin-top: 50px;
-      margin-left: 50px;
+      width: 4/3 * $pageDim;
+    }
+    .compat-feature {
+      width: 18/15 * $pageDim;
+    }
+    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
+      margin-right: $pageDim / 5;
     }
   }
 }
+
+
+
 
 
