@@ -17,7 +17,7 @@
 **Dependances:
 **_compatFeatures.scss
 **_compatBanner.scss
-**_compatCTA.scss
+**_compatCTA.scss > _compat-form.scss
 **_compatFooter.scss
 */
 
@@ -206,30 +206,6 @@ img {
     }
   }
 }
-
-  @media (min-width: $c2w + 1) and (max-width: $c3w) {
-  .compat-container {
-    width: $c2w;
-    height: auto;
-    margin: 0 auto;
-  }
-  .compat-pageWrapper {
-    float: left;
-    width: $pPw;
-    height: $pPh;
-  }
-  .compat-page {
-    width: $pPw;
-    height: $pPh;
-  }
-  .compat-subPage {
-    display: table;
-  }
-  .compat-feature-content {
-    display: table-cell;
-    vertical-align: middle;
-  }
-}
 }
 @else {
   @media (min-width: $pPw + 1) and (max-width: $c2w) {
@@ -253,28 +229,29 @@ img {
   }
 }
     // je ne vois pas l'utiliter d'un mode "landscape"
-  @media (min-width: $c2w + 1) and (max-width: $c3w) {
-    .compat-container {
-      width: $c2w;
-      height: auto;
-      margin: 0 auto;
-    }
-    .compat-pageWrapper {
-      float: left;
-      width: $pPw;
-      height: $pPh;
-    }
-    .compat-page {
-      width: $pPw;
-      height: $pPh;
-    }
-    .compat-subPage {
-      display: table;
-    }
-    .compat-feature-content {
-      display: table-cell;
-      vertical-align: middle;
-    }
+}
+
+@media (min-width: $c2w + 1) and (max-width: $c3w) {
+  .compat-container {
+    width: $c2w;
+    height: auto;
+    margin: 0 auto;
+  }
+  .compat-pageWrapper {
+    float: left;
+    width: $pPw;
+    height: $pPh;
+  }
+  .compat-page {
+    width: $pPw;
+    height: $pPh;
+  }
+  .compat-subPage {
+    display: table;
+  }
+  .compat-feature-content {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 

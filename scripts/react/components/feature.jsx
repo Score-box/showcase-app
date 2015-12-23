@@ -43,6 +43,8 @@ var FeatureItem = React.createClass({
           <div className='compat-subPage'>
             <div className='compat-feature-content'>
               <p>{feature.text}</p>
+              <p>{feature.textTwo}</p>
+              <p>{feature.textThree}</p>
             </div>
           </div>
 

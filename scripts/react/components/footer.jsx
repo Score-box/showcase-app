@@ -30,6 +30,13 @@ module.exports = React.createClass({
             <div className="compat-subPage"></div>
           </div>
         </div>
+      
+        <div className="compat-pageWrapper">
+          <div className="compat-page">
+            <div className="compat-subPage"></div>
+            <div className="compat-subPage"></div>
+          </div>
+        </div>
 
       </div>
       );

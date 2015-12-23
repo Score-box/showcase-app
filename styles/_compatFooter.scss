@@ -3,8 +3,16 @@
 **
 */
 
-// Version mobile à 1 page du footer
+
+#footer {
+  background-color: #01579B;
+  color: #ffffff;
+}
+
+// Taille du footer
+  // Version mobile à 1 page du footer
 @if $pLw <= $c2w {
+  
   @media (max-width: $pLw) {
     #footer {
       .compat-pageWrapper:nth-child(n+2) {
@@ -13,7 +21,17 @@
       }
     }
   }
+  // Version à 2 page du footer landscape mode
+  @media (min-width: $pLw + 1) and (max-width: $c2w) {
+    #footer {
+      .compat-pageWrapper:nth-child(n+3) {
+        position: absolute;
+        right: 10000px;
+      }
+    }
+  }
 }@else {
+  // Version mobile à 1 page du footer
   @media (max-width: $c2w) {
     #footer {
       .compat-pageWrapper:nth-child(n+2) {
@@ -23,19 +41,31 @@
     }
   }
 }
-
-
-// Version à 2 pages dès que 2 col sont possibles c2w et pLW
-
-// c3w < x < c4w c'est ok
-
-// c4w < Il faut recentrer le footer ou scale les pages du footer (idem banner)
-
-
-#footer {
-  background-color: #01579B;
-  color: #ffffff;
+  // Version à 2 page du footer portrait mode
+@media (min-width: $c2w + 1) and (max-width: $c3w) {
+  #footer {
+    .compat-pageWrapper:nth-child(n+3) {
+      position: absolute;
+      right: 10000px;
+    }
+  }
 }
+  // Version à 3 page du footer
+@media (min-width: $c3w + 1) and (max-width: $c4w) {
+  #footer {
+    .compat-pageWrapper:nth-child(n+4) {
+      position: absolute;
+      right: 10000px;
+    }
+  }
+}
+  // Version à 4 page du footer
+@media (min-width: $c4w + 1) {
+  // Sweet nothing
+}
+
+
+
 
 
 

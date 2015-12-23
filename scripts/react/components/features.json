@@ -1,0 +1,104 @@
+
+module.exports = [
+  {
+    img: {
+      src: '/images/earth-300x300.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Partagez vos plus belles victoires !',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum nec purus id fringilla. Vestibulum eros felis, lobortis vitae est a, consectetur sollicitudin quam.',
+    textTwo: 'Ut non augue vitae sem lobortis tristique id at enim. Pellentesque pellentesque quam vel nunc sodales semper.',
+    id: 'whatever'
+  }, {
+    img: {
+      src: '/images/megaphone-250.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Géolocalisez vos adversaires !',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    textTwo: 'Suspendisse condimentum nec purus id fringilla. Vestibulum eros felis, lobortis vitae est',
+    textThree: 'Ut non augue vitae sem lobortis tristique id at enim. Pellentesque pellentesque quam vel nunc sodales semper.',
+    id: 'idem'
+  }, {
+    img: {
+      src: '/images/memory1.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Partagez vos plus belles victoires !',
+    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
+    id: '3'
+  }, {
+    img: {
+      src: '/images/memory2.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Géolocalisez vos adversaires !',
+    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id: '4'
+  }, {
+    img: {
+      src: '/images/rewards-250.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Partagez vos plus belles victoires !',
+    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
+    id: '5'
+  }, {
+    img: {
+      src: '/images/vs-250.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Géolocalisez vos adversaires !',
+    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id: '6'
+  },
+  {
+    img: {
+      src: '/images/earth-300x300.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Partagez vos plus belles victoires !',
+    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
+    id: '7'
+  }, {
+    img: {
+      src: '/images/megaphone-250.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Géolocalisez vos adversaires !',
+    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id: '8'
+  }, {
+    img: {
+      src: '/images/memory1.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Partagez vos plus belles victoires !',
+    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
+    id: '9'
+  }, {
+    img: {
+      src: '/images/memory2.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Géolocalisez vos adversaires !',
+    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id: '10'
+  }, {
+    img: {
+      src: '/images/rewards-250.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Partagez vos plus belles victoires !',
+    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
+    id: '11'
+  }, {
+    img: {
+      src: '/images/vs-250.png',
+      alt: 'Ping Pong'
+    },
+    title: 'Géolocalisez vos adversaires !',
+    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id: '12'
+  }
+];

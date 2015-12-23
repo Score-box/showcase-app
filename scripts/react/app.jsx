@@ -4,58 +4,8 @@ var Menu = require('./components/menu.jsx');
 var Footer = require('./components/footer.jsx');
 var Summary = require('./components/SummaryTogglable.jsx');
 var Cta = require('./components/Cta.jsx');
+var FEATURES = require('./components/features.json');
 
-var FEATURES = [
-  {
-    img: {
-      src: '/images/earth-300x300.png',
-      alt: 'Ping Pong'
-    },
-    title: 'Partagez vos plus belles victoires !',
-    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id: 'whatever'
-  }, {
-    img: {
-      src: '/images/ping_pong.png',
-      alt: 'Ping Pong'
-    },
-    title: 'Géolocalisez vos adversaires !',
-    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id: 'idem'
-  }, {
-    img: {
-      src: '/images/ping_pong.png',
-      alt: 'Ping Pong'
-    },
-    title: 'Partagez vos plus belles victoires !',
-    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id: '3'
-  }, {
-    img: {
-      src: '/images/ping_pong.png',
-      alt: 'Ping Pong'
-    },
-    title: 'Géolocalisez vos adversaires !',
-    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id: '4'
-  }, {
-    img: {
-      src: '/images/ping_pong.png',
-      alt: 'Ping Pong'
-    },
-    title: 'Partagez vos plus belles victoires !',
-    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id: '5'
-  }, {
-    img: {
-      src: '/images/ping_pong.png',
-      alt: 'Ping Pong'
-    },
-    title: 'Géolocalisez vos adversaires !',
-    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id: '6'
-  }
-];
 
 var AppClass = [
   'reactApp'
