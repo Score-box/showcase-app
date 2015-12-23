@@ -8,62 +8,62 @@ var Cta = require('./components/Cta.jsx');
 var FEATURES = [
   {
     img: {
-      src: '/images/ping_pong.png',
-      alt:'Ping Pong'
+      src: '/images/earth-300x300.png',
+      alt: 'Ping Pong'
     },
     title: 'Partagez vos plus belles victoires !',
     text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id:'whatever'
-  },{
-    img: {
-      src:'/images/ping_pong.png',
-      alt:'Ping Pong'
-    },
-    title:'Géolocalisez vos adversaires !',
-    text:'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id:'idem'
-  },{
+    id: 'whatever'
+  }, {
     img: {
       src: '/images/ping_pong.png',
-      alt:'Ping Pong'
+      alt: 'Ping Pong'
+    },
+    title: 'Géolocalisez vos adversaires !',
+    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id: 'idem'
+  }, {
+    img: {
+      src: '/images/ping_pong.png',
+      alt: 'Ping Pong'
     },
     title: 'Partagez vos plus belles victoires !',
     text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id:'3'
-  },{
-    img: {
-      src:'/images/ping_pong.png',
-      alt:'Ping Pong'
-    },
-    title:'Géolocalisez vos adversaires !',
-    text:'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id:'4'
-  },{
+    id: '3'
+  }, {
     img: {
       src: '/images/ping_pong.png',
-      alt:'Ping Pong'
+      alt: 'Ping Pong'
+    },
+    title: 'Géolocalisez vos adversaires !',
+    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id: '4'
+  }, {
+    img: {
+      src: '/images/ping_pong.png',
+      alt: 'Ping Pong'
     },
     title: 'Partagez vos plus belles victoires !',
     text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id:'5'
-  },{
+    id: '5'
+  }, {
     img: {
-      src:'/images/ping_pong.png',
-      alt:'Ping Pong'
+      src: '/images/ping_pong.png',
+      alt: 'Ping Pong'
     },
-    title:'Géolocalisez vos adversaires !',
-    text:'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id:'6'
+    title: 'Géolocalisez vos adversaires !',
+    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
+    id: '6'
   }
 ];
 
 var AppClass = [
   'reactApp'
-].join(' ')
+].join(' ');
 
 var ScrollerClass = [
 
-].join(' ')
+].join(' ');
 
 var App = React.createClass({
   getInitialState: function () {
@@ -71,25 +71,25 @@ var App = React.createClass({
     var pageList = [{
         name: 'Score Box',
         id: 'banner'
-      },{
+      }, {
         name: FEATURES[0].title,
         id: FEATURES[0].id
-      },{
+      }, {
         name: FEATURES[1].title,
         id: FEATURES[1].id
-      },{
+      }, {
         name: 'More',
         id: 'footer'
       }];
-    var navList = pageList.map(function(page, index) {
+    var navList = pageList.map(function (page, index) {
       return function () {
         var _state = {
           currentPage: index,
           ctaTogglable : {
-            visibility: (index == 0 || index == self.state.pageList.length - 1) ? true : false
+            visibility: (index === 0 || index === self.state.pageList.length - 1) ? true : false
           }
         }
-        self.setState (
+        self.setState(
            _state
         )
       }
@@ -139,26 +139,30 @@ var App = React.createClass({
   },render:function () {
     return (
       <div className={AppClass}>
-        <div className="compat-wrapper" id="banner">
+        <div className="compat-containerWrapper" id="banner">
           <div className="compat-container">
-              <div className="compat-page">
+            <div className="compat-smallBanner">
+              <div className="compat-pageWrapper">
                 <Banner/>
               </div>
-            <Cta/>
-            <div className="compat-page">
-              <div className="compat-mockWrapper">
-                <img src="/images/mockup-test.png"/>
+            </div>
+              <div className="compat-pageWrapper">
+                <Cta/>
+              </div>
+              <div className="compat-pageWrapper" id="compat-mockPageWrapper">
+                <div className="compat-page">
+                  <div className="compat-mockWrapper">
+                    <img src="/images/mockup-test.png"/>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="compat-wrapper">
+        <div className="compat-containerWrapper" id="content">
             <FeatureList features={FEATURES}/>
         </div>
-        <div className="compat-wrapper" id="footer">
-          <div className="compat-container">
+        <div className="compat-containerWrapper" id="footer">
             <Footer/>
-          </div>
         </div>
     </div>
     );

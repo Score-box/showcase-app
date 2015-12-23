@@ -10,9 +10,27 @@ module.exports = React.createClass({
         id='footer'
         className={FooterClass}
       >
-        <div className="compat-page"></div>
-        <div className="compat-page"></div>
-        <div className="compat-page"></div>
+        <div className="compat-pageWrapper">
+          <div className="compat-page">
+            <div className="compat-subPage"></div>
+            <div className="compat-subPage"></div>
+          </div>
+        </div>
+      
+        <div className="compat-pageWrapper">
+          <div className="compat-page">
+            <div className="compat-subPage"></div>
+            <div className="compat-subPage"></div>
+          </div>
+        </div>
+      
+        <div className="compat-pageWrapper">
+          <div className="compat-page">
+            <div className="compat-subPage"></div>
+            <div className="compat-subPage"></div>
+          </div>
+        </div>
+
       </div>
       );
   }

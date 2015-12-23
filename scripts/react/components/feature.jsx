@@ -1,7 +1,7 @@
 
 var FeatureItemClass = [
   'compat-feature',
-  'compat-page'
+  'compat-pageWrapper'
 ].join(' ')
 
 var FeatureListClass = [
@@ -26,22 +26,27 @@ var FeatureItem = React.createClass({
         id={feature.id}
         className={FeatureItemClass}
       >
+        <div className="compat-page">
+          <div className='compat-subPage'>
+            <div className="compat-imgFeatWrapperCont">
+              <div className="compat-imgFeatWrapper">
+                <div className="compat-feature-img">
+                  <img src={R(feature.img.src)} alt={feature.img.alt}/>
+                </div>
+              </div>
+            </div>
+            <div className='compat-feature-title'>
+              <h3>{feature.title}</h3>
+            </div>
+          </div>
 
-        <div className='sub-page'>
-          <div className="compat-imgFeatWrapper">
-            <img className='compat-feature-img' src={R(feature.img.src)} alt={feature.img.alt}/>
+          <div className='compat-subPage'>
+            <div className='compat-feature-content'>
+              <p>{feature.text}</p>
+            </div>
           </div>
-          <div className='compat-feature-title'>
-            <h3>{feature.title}</h3>
-          </div>
+
         </div>
-
-        <div className='sub-page'>
-          <div className='compat-feature-content'>
-            <p>{feature.text}</p>
-          </div>
-        </div>
-
       </div>
     );
   }

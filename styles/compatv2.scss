@@ -1,0 +1,284 @@
+/*
+**Container: C
+**Page: p
+**Sub: s
+**seperation: S
+**
+**Portrait: P
+**Landscape: L
+**
+**width: w
+**height: h
+**
+**seperation: S
+*/
+
+
+body.compat {
+  overflow: visible;
+}
+#react-content {
+  position:inherit;
+  text-align: center;
+}
+
+// Variables
+
+$sw : 400px;
+$sh : 300px;
+
+  // Séparateur
+$SP : 1/20 * $sh;
+$SL: 1/20 * $sw;
+$cS: 2 * $SL;     // séparateur de pages
+
+  // Mode Portrait
+$pPw : $sw;
+$pPh : 2 * $sh + $SP;
+  
+  // Mode Landscape
+$pLw: 2 * $sw + $SL;
+$pLh: $sh;
+
+  // Container width
+$cw: $pPw;
+$c2w : 2 * $pPw + $cS;
+$c3w: 3 * $pPw + 2 * $cS;
+$c4w: 4 * $pPw + 3 * $cS;
+
+
+// Typographie
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.25em;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-size: 1.2em;
+}
+
+#body {
+  color: #000000;
+}
+#footer {
+  background-color: #01579B;
+  color: #ffffff;
+}
+#banner {
+  background-color: #0277BD;
+  color: #ffffff;
+}
+
+// Layout
+
+  // Layout Default
+.compat-containerWrapper {
+  width: 100%;
+  overflow:hidden;
+  position: relative;
+}
+.compat-container {}
+.compat-pageWrapper {}
+.compat-page {}
+.compat-subPage {
+  position: relative;
+}
+
+  // Image responsive
+img {
+  max-width: 100%;
+}
+.compat-logoWrapper {
+  margin: 0 auto;
+  max-width: 100px;
+}
+.compat-imgFeatWrapper {
+  max-width: 100px;
+  margin-left: 70px;
+}
+.compat-mockWrapper {
+  margin: 0 auto;
+  max-width: 100px;
+}
+
+  // Texte
+
+.compat-feature-title {
+  
+}
+.compat-feature-content {
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); // IE8<  && != opéra mini
+}
+
+  // @media
+
+    // Le mockup est masqué en dessous de c3w
+@media (max-width: $c3w) {
+  #compat-mockPageWrapper{
+    position: absolute;
+    right: 10000px;
+  }
+}
+      // Dimensionne le mockup
+@media (min-width: $c3w) {
+  .compat-mockWrapper {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+}
+
+
+@media (max-width: $pPw) {
+  .compat-container {
+    margin: $SP $SL;
+  }
+  .compat-page {
+    margin-bottom: $SP;
+  }
+}
+
+@media (min-width: $pPw + 1) and (max-width: $pLw) {
+  .compat-pageWrapper {
+    width: $pPw;
+    margin: 0 auto;
+  }
+  .compat-page {
+    margin-bottom: $cS;
+  }
+  .compat-subPage {
+    width: $sw;
+    height: $sh;
+  }
+}
+
+@media (min-width: $pPw + 1) and (max-width: $pLw) and (orientation: landscape), (min-width: $pPw + 1) and (max-width: $c2w) and (orientation: portrait) {
+  .compat-pageWrapper {
+    width: $pPw;
+    margin: 0 auto;
+  }
+  .compat-subPage {
+    width: $sw;
+    height: $sh;
+  }
+  .compat-page {
+    margin-bottom: $cS;
+  }
+}
+
+@media (min-width: $pLw + 1) and (max-width: $c3w) and (orientation: landscape) {
+  .compat-container {
+    width: $c2w;
+    margin: 0 auto;
+  }
+  .compat-pageWrapper {
+    float: left;
+    margin-bottom:$cS;
+  }
+  .compat-page {
+     width: $pLw;
+     height: $pLh;
+  }
+  .compat-subPage{
+    width: $sw;
+    height: $sh;
+    float: left;
+  }
+}
+
+@media (min-width: $c2w + 1) and (max-width: $c3w) and (orientation: portrait) {
+
+  .compat-container {
+      width: $c2w;
+      margin: 0 auto;
+    }
+  .compat-pageWrapper {
+      float: left;
+      margin-bottom:$cS;
+    }
+  .compat-pageWrapper:first-child, .compat-pageWrapper:nth-child(3), .compat-pageWrapper:nth-child(5) {
+      margin-right: $cS;
+    } // pb pour les features nth-child ?
+  .compat-page {
+    width: $sw;
+    height: $pPh;
+  }
+  .compat-subPage{
+    width: $sw;
+    height: $sh;
+  }
+  #compat-footerLastPage {
+    position: absolute;
+    right: 10000px;
+  }
+}
+
+@media (min-width: $c3w +1) and (max-width: $c4w) {
+  .compat-container {
+    width: $c3w;
+    margin: 0 auto;
+  }
+  .compat-pageWrapper {
+    float: left;
+    margin-bottom:$cS;
+    margin-right: $cS;
+  }
+  .compat-pageWrapper:nth-child(3n) {
+    margin-right: 0px;
+  } // pb pour les features nth-child ?
+  .compat-page {
+    width: $sw;
+    height: $pPh;
+  }
+  .compat-subPage{
+    width: $sw;
+    height: $sh;
+  }
+}
+
+@media (min-width: $c4w + 1){
+  .compat-container {
+    width: $c4w;
+    margin: 0 auto;
+  }
+  // centre les pages de la banner
+  #banner .compat-container {
+    width: $c3w;
+    margin: 0 auto;
+    .compat-pageWrapper:last-child {
+      margin-right: 0px;
+    }
+  }
+  // centre les pages du footer
+  #footer .compat-container {
+    width: $c3w;
+    margin: 0 auto;
+    .compat-pageWrapper:last-child {
+      margin-right: 0px;
+    }
+  }
+  .compat-pageWrapper {
+    float: left;
+    margin-bottom:$cS;
+    margin-right: $cS;
+  }
+.compat-pageWrapper:nth-child(4n) {
+    margin-right: 0px;
+  } // pb pour les features nth-child ?
+.compat-page {
+    width: $sw;
+    height: $pPh;
+  }
+.compat-subPage{
+    width: $sw;
+    height: $sh;
+  }
+}

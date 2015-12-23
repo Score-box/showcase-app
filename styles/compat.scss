@@ -1,13 +1,68 @@
-$pageDim : 400px;
+/*
+**Container: C
+**Page: p
+**Sub: s
+**seperation: S
+**
+**Portrait: P
+**Landscape: L
+**Horizontal : H
+**Vertical: V
+**
+**width: w
+**height: h
+**
+**seperation: S
+**
+**Dependances:
+**_compatFeatures.scss
+**_compatBanner.scss
+**_compatCTA.scss
+**_compatFooter.scss
+*/
+
 
 body.compat {
   overflow: visible;
 }
-
 #react-content {
   position:inherit;
   text-align: center;
 }
+
+// Variables
+
+$sw : 400px;
+$sh : 250px;
+
+  // Séparateur
+$SP : 1/15 * $sh;
+$SL: 1/20 * $sw;
+$cVS: 2 * $SL;     // séparateur verticale de pages
+$cHS: 2 * $SL;    // séparateur horizontal de pages
+
+  // Mode Portrait
+$pPw : $sw;
+$pPh : 2 * $sh + $SP;
+  
+  // Mode Landscape
+$pLw: 2 * $sw + $SL;
+$pLh: $sh;
+
+  // Container width
+$cw: $pPw;
+$c2w : 2 * $pPw + $cVS;
+$c3w: 3 * $pPw + 2 * $cVS;
+$c4w: 4 * $pPw + 3 * $cVS;
+
+
+//IMPORT
+
+@import 'compatBanner.scss';
+@import 'compatFooter.scss';
+@import 'compatCTA.scss';
+
+// Typographie
 
 h1 {
   font-size: 3em;
@@ -22,256 +77,257 @@ p {
   font-size: 1.2em;
 }
 
-#footer {
-  background-color: #1a2127;
+#body {
+  color: #000000;
 }
 
-.compat-wrapper {
-  width: 100%;
-}
-.compat-container {
-  width: 100%;
-  margin: 0 auto;
-  overflow:hidden;
-  position: relative;
+#content {
+
 }
 
-.compat-page {
-  width: 100%;
-  height: 5/4 * $pageDim;
-}
+  // Texte
+.compat-siteTitle {}
+.compat-logoWrapperContainer {}
 
-.sub-page {
-  height: $pageDim * 5/8;
-}
+.compat-CtaTitle {}
+.compat-formContainer {}
 
+.compat-feature-title {}
+.compat-feature-content {}
 
-
-#banner {
-  background-image: url('/images/sky.jpeg');
-  background-repeat: no-repeat;
-  background-size: 100% 5/4 * $pageDim;
-}
-
+  // Image responsive
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
 }
-
 .compat-logoWrapper {
+  margin: 0 auto;
+  max-width: 200px;
+}
+.compat-feature-img {
   max-width: 100px;
   margin: 0 auto;
-}
-.compat-imgFeatWrapper {
-  margin: 0 auto;
-  max-width: 100px;
-}
-.compat-mockWrapper {
-  margin: 0 auto;
-  max-width: 125px;
+  //margin-left: 70px;
 }
 
 
-@media (orientation: landscape) {
-  
-  @media (min-width: $pageDim){
-    .compat-page {
-      width: $pageDim;
+// LAYOUT
+  // Layout Default
+.compat-containerWrapper {
+  width: 100%;
+  overflow:hidden;
+  //position: relative;
+}
+.compat-container {}
+.compat-pageWrapper {}
+.compat-page {}
+.compat-subPage {
+  height: $sh;
+  width: $sw;
+  display: table;
+}
+.compat-siteTitle, .compat-logoWrapperContainer, .compat-fbContainer {
+  display: table-cell;
+  vertical-align: middle;
+}
+  // @media
+
+
+
+@media (min-width: $pPw +1) {
+  @import 'compatFeatures.scss';
+}
+
+    // très petit --> mise en page basique
+@media (max-width: $pPw) {
+  .compat-container {
+    //margin: $SP $SL;
+  }
+  .compat-page {
+    margin-bottom: $SP; // 0 pour l'instant
+  }
+  .compat-subPage {
+    width: 100%;
+  }
+  .compat-feature-content {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .compat-formContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+      // Centre le logo
+  .compat-logoWrapper {
+    margin: 0 auto;
+    max-width: 100px;
+  }
+}
+
+    // On prend en compte les modifs éventuelles des marges
+@if $pLw <= $c2w {
+    // petit mode portrait
+  @media (min-width: $pPw + 1) and (max-width: $pLw) {
+    // container
+  .compat-pageWrapper {
+    width: $pPw;
+    height: $pPh;
+    margin: 0 auto;
+    overflow: hidden; //juste pour etre certain
+  }
+  .compat-page {
+    width: $pPw;
+    height: $pPh;
+  }
+}
+    // petit mode paysage
+  @media (min-width: $pLw + 1) and (max-width: $c2w) {
+  .compat-pageWrapper {
+    width: $pLw;
+    height: $pLh;
+    margin: 0 auto;
+    overflow: hidden; //juste pour etre certain
+  }
+  .compat-page {
+    width: pLw;
+    height: pLh;
+  }
+  .compat-subPage {
+    float: left;
+    display: table;
+  }
+  .compat-feature-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .compat-feature {
+    margin-bottom: $cHS;
+    .compat-subPage:first-child {
+      margin-right: $SL;
+    }
+  }
+}
+
+  @media (min-width: $c2w + 1) and (max-width: $c3w) {
+  .compat-container {
+    width: $c2w;
+    height: auto;
+    margin: 0 auto;
+  }
+  .compat-pageWrapper {
+    float: left;
+    width: $pPw;
+    height: $pPh;
+  }
+  .compat-page {
+    width: $pPw;
+    height: $pPh;
+  }
+  .compat-subPage {
+    display: table;
+  }
+  .compat-feature-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+}
+@else {
+  @media (min-width: $pPw + 1) and (max-width: $c2w) {
+    // container
+  .compat-pageWrapper {
+    width: $pPw;
+    height: $pPh;
+    margin: 0 auto;
+    overflow: hidden; //juste pour etre certain
+  }
+  .compat-page {
+    width: $pPw;
+    height: $pPh;
+  }
+  .compat-subPage {
+    display: table;
+  }
+  .compat-feature-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+    // je ne vois pas l'utiliter d'un mode "landscape"
+  @media (min-width: $c2w + 1) and (max-width: $c3w) {
+    .compat-container {
+      width: $c2w;
+      height: auto;
       margin: 0 auto;
     }
-    .sub-page {
+    .compat-pageWrapper {
       float: left;
-    }
-    .compat-feature {
-     .sub-page {
-      float: left;
-      width: $pageDim / 2 - $pageDim / 40;
-     }
-      .sub-page:first-child {
-        margin-right: $pageDim / 20;
-      }
-    }
-    .compat-Cta {
-      .sub-page {
-        float: none;
-        margin: 0 auto;
-        width: 2/3 * $pageDim;
-      }
-    }
-    #banner {
-      background-size: 100% $pageDim * 6/7;
-    }
-    .compat-imgFeatWrapper {
-      max-width: 75px;
-    }
-    .compat-mockWrapper {
-      max-width: 150px;
-    }
-  }
-  
-  @media (min-width: 2 * $pageDim) {
-    .compat-container {
-      width: 2 * $pageDim;
+      width: $pPw;
+      height: $pPh;
     }
     .compat-page {
-      width: 2/3 * $pageDim ;
-      float: left;
-      margin-top: 30px;
+      width: $pPw;
+      height: $pPh;
     }
-    
-    .compat-feature {
-      width: 2/3 * $pageDim - $pageDim * 2/15;
-     .sub-page {
-      float: none;
-      width: 100%;
-     }
-      .sub-page:first-child {
-        margin-right: 0px;
-      }
+    .compat-subPage {
+      display: table;
     }
-    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
-        margin-right: $pageDim / 5;
-      }
-    .sub-page {
-      float: none;
-      width: 100%;
-    }
-    #banner {
-      background-size: cover;
-    }
-    .compat-imgFeatWrapper {
-      max-width: 75px;
-    }
-    .compat-mockWrapper {
-      position: relative;
-      top: 260px;
-    }
-  }
-  
-  @media (min-width: 3 * $pageDim) {
-
-    .compat-container {
-       width: 3 * $pageDim;
-    }
-    .compat-page {
-      width: $pageDim;
-      float: left;
-    }
-    .compat-feature {
-      width: $pageDim * 13/15;
-    }
-    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
-        margin-right: $pageDim / 5;
-    }
-    .compat-mockWrapper {
-      max-width: 250px;
-      top: 130px;
-    }
-  }
-  
-  @media (min-width: 4 * $pageDim) {
-    .compat-container {
-       width: 4 * $pageDim;
-    }
-    .compat-page {
-      width: 4/3 * $pageDim;
-      float: left;
-      margin-top: 30px;
-    }
-    .compat-feature {
-      width: 7/6 * $pageDim;
-    }
-    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
-        margin-right: $pageDim / 4;
-      color: red;
+    .compat-feature-content {
+      display: table-cell;
+      vertical-align: middle;
     }
   }
 }
 
-/**************************************************************************/
-
-@media (orientation: portrait){
-  @media (min-width: $pageDim){
-    .compat-container {
-       width: $pageDim;
-    }
-    .compat-page {
-      width: $pageDim ;
-    }
-    .compat-mockWrapper {
-      max-width: $pageDim / 2;
+@media (min-width: $c3w + 1) and (max-width: $c4w) {
+  .compat-container {
+    width: $c3w;
+    height: auto;
+    margin: 0 auto;
   }
-    
-}
-  
-  @media (min-width: 2 * $pageDim) {
-    .compat-container {
-       width: 2 * $pageDim;
-    }
-    .compat-page {
-      width: $pageDim;
-      float: left;
-      margin-top: 50px;
-    }
-    .compat-feature {
-      width: 9/10 * $pageDim;
-    }
-    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
-      margin-right: $pageDim / 10;
-    }
-
-    #banner {
-      background-size: cover;
-    }
-    .compat-mockWrapper {
-      max-width: 250px;
-      position: relative;
-      left: $pageDim * 1/2;
-      top: 120px;
-    }
-    .compat-imgFeatWrapper {
-      max-width: 150px;
-    }
-
+  // redondant avec @media précédente
+  .compat-pageWrapper {
+    float: left;
+    width: $pPw;
+    height: $pPh;
   }
-
-  @media (min-width: 3 * $pageDim) {
-
-    .compat-container {
-       width: 3 * $pageDim;
-    }
-    .compat-page {
-      width: $pageDim;
-      float: left;
-    }
-    .compat-feature {
-      width: 28/30 * $pageDim;
-    }
-    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
-      margin-right: $pageDim / 10;
-    }
-    .compat-mockWrapper {
-      max-width: 250px;
-      top: 120px;
-      left: 0px;
-    }
+  .compat-page {
+    width: $pPw;
+    height: $pPh;
   }
-
-  @media (min-width: 4 * $pageDim) {
-    .compat-container {
-       width: 4 * $pageDim;
-    }
-    .compat-page {
-      width: 4/3 * $pageDim;
-    }
-    .compat-feature {
-      width: 18/15 * $pageDim;
-    }
-    .compat-feature:first-child,.compat-feature:nth-child(2),.compat-feature:nth-child(4),.compat-feature:nth-child(5) {
-      margin-right: $pageDim / 5;
-    }
+  .compat-subPage {
+    display: table;
+  }
+  .compat-feature-content {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
+
+@media (min-width: $c4w + 1) {
+  .compat-container {
+    width: $c4w;
+    height: auto;
+    margin: 0 auto;
+  }
+  // redondant avec @media précédente
+  .compat-pageWrapper {
+    float: left;
+    width: $pPw;
+    height: $pPh;
+  }
+  .compat-page {
+    width: $pPw;
+    height: $pPh;
+  }
+  .compat-subPage {
+    display: table;
+  }
+  .compat-feature-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
 
 
 

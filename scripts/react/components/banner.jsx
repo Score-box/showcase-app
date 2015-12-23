@@ -3,20 +3,24 @@ function urlify (url) {
 }
 
 var BannerClass = [
-
+  'compat-page'
 ].join(' ')
 
 module.exports = React.createClass({render: function () {
   return (
-    <div id=''className={BannerClass}>
-      <div className='sub-page'>
+    <div className={BannerClass}>
+      <div className='compat-subPage'>
+        <div className="compat-siteTitle">
             <h1>SCORE BOX</h1>
+        </div>
+      </div>
+      <div className='compat-subPage'>
+        <div className="compat-logoWrapperContainer">
+          <div className="compat-logoWrapper">
+            <img src="images/logoV14_20.png"/>
           </div>
-          <div className='sub-page'>
-              <div className="compat-logoWrapper">
-            <img src="images/logoV12_center_256gold_transparent.png"/>
-              </div>
-          </div>
+        </div>
+      </div>
     </div>
   );
 }});

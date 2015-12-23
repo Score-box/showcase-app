@@ -1,0 +1,58 @@
+/*
+**
+**
+*/
+
+// Version mobile à 1 page du footer
+@if $pLw <= $c2w {
+  @media (max-width: $pLw) {
+    #footer {
+      .compat-pageWrapper:nth-child(n+2) {
+        position: absolute;
+        right: 10000px;
+      }
+    }
+  }
+}@else {
+  @media (max-width: $c2w) {
+    #footer {
+      .compat-pageWrapper:nth-child(n+2) {
+        position: absolute;
+        right: 10000px;
+      }
+    }
+  }
+}
+
+
+// Version à 2 pages dès que 2 col sont possibles c2w et pLW
+
+// c3w < x < c4w c'est ok
+
+// c4w < Il faut recentrer le footer ou scale les pages du footer (idem banner)
+
+
+#footer {
+  background-color: #01579B;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
