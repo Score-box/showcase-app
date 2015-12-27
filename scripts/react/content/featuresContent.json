@@ -10,6 +10,30 @@ module.exports = [
     id: 'réseau social'
   }, {
     img: {
+      src: '/images/multi-sport-250.png',
+      alt: 'multi sport'
+    },
+    title: 'Pour tous les sports et jeux !',
+    text: "Des Sports en équipes ou en 1 contre 1, aux jeux de plateaux en passant par les jeux de cartes, tout est permis. Que vous soyez amateurs de foot, afficionados du paintball, accro au street goolf ou mordu d'échec, scorebox est faite pour vous.",
+    id: 'multiSport'
+  },  {
+    img: {
+      src: '/images/no-euro-250.png',
+      alt: 'Freemium'
+    },
+    title: 'Un compagnon qui n’a pas de prix',
+    text: 'Pas d’abonnement premium, vous avez accès à toutes les fonctionnalités (individuelles) depuis votre compte gratuit.',
+    id: 'free'
+  }, {
+    img: {
+      src: '/images/no-liar-250.png',
+      alt: 'fairplay'
+    },
+    title: 'Le fairplay est garantie',
+    text: 'Vous avez un ami mauvais perdant qui tente, à grand renfort de mauvaise foi, de minimiser vos exploits ? Avec scorebox vous pourrez enfin lui faire admettre qu’il a perdu lors de vos 5 dernières parties.',
+    id: 'fairplay'
+  }, {
+    img: {
       src: '/images/vs-250.png',
       alt: 'défi'
     },
@@ -34,48 +58,23 @@ module.exports = [
     id: 'Historique'
   }, {
     img: {
-      src: '/images/rewards-250.png',
-      alt: 'Ping Pong'
+      src: '/images/stats-250.png',
+      alt: 'vos statistiques'
     },
-    title: 'Partagez vos plus belles victoires !',
-    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id: '5'
-  }, {
+    title: 'Analysez vos Statistiques',
+    text: 'Accédez à vos statistiques, mesurez vos progrès par type d’activité et comparez-vous aux meilleurs.',
+    id: 'stats'
+  },{
     img: {
-      src: '/images/vs-250.png',
-      alt: 'Ping Pong'
+      src: '/images/peeping-250.png',
+      alt: 'peeping'
     },
-    title: 'Géolocalisez vos adversaires !',
-    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id: '6'
-  },
-  {
+    title: 'Accès aux statistiques des autres joueurs',
+    text: 'Découvrez vos concurents les plus serieux, analyser leurs performances et lancez leur un défi si vous l acceptez.',
+    id: 'comparaison'
+  }, {
     img: {
       src: '/images/earth-250.png',
-      alt: 'Ping Pong'
-    },
-    title: 'Partagez vos plus belles victoires !',
-    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id: '7'
-  }, {
-    img: {
-      src: '/images/megaphone-250.png',
-      alt: 'Ping Pong'
-    },
-    title: 'Géolocalisez vos adversaires !',
-    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id: '8'
-  }, {
-    img: {
-      src: '/images/memory1-250.png',
-      alt: 'Ping Pong'
-    },
-    title: 'Partagez vos plus belles victoires !',
-    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id: '9'
-  }, {
-    img: {
-      src: '/images/memory2-250.png',
       alt: 'Ping Pong'
     },
     title: 'Géolocalisez vos adversaires !',
@@ -83,19 +82,83 @@ module.exports = [
     id: '10'
   }, {
     img: {
-      src: '/images/rewards-250.png',
+      src: '/images/matchTag-250.png',
       alt: 'Ping Pong'
     },
-    title: 'Partagez vos plus belles victoires !',
+    title: 'Taguez vos matches',
     text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id: '11'
+    id: 'match'
   }, {
     img: {
-      src: '/images/vs-250.png',
+      src: '/images/map-250.png',
       alt: 'Ping Pong'
     },
-    title: 'Géolocalisez vos adversaires !',
+    title: 'Trouvez un spot pour pratiquer votre activité préférée !',
     text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id: '12'
+    id: 'spot'
+  }, {
+    img: {
+      src: '/images/arbitrator-250.png',
+      alt: 'trouver un arbitre'
+    },
+    title: 'un arbitre qui saisit en temps réel les moments forts',
+    text: '',
+    id: 'arbitre'
+  }, {
+    img: {
+      src: '/images/photo-250.png',
+      alt: 'prendre une photo'
+    },
+    title: 'Ajoutez une photo pour immortaliser vos exploits',
+    text: '',
+    id: 'photo'
+  }, {
+    img: {
+      src: '/images/video-250.png',
+      alt: 'enregistrez une vidéo'
+    },
+    title: 'Enregistrez une vidéo pour revivre vos plus belles performances',
+    text: '',
+    id: 'video'
+  }, {
+    img: {
+      src: '/images/tournament-250.png',
+      alt: 'Participez à des tournois'
+    },
+    title: 'Participez à des tournois',
+    text: '',
+    id: 'tournois'
+  }, {
+    img: {
+      src: '/images/tournois-orga-250.png',
+      alt: 'Organisez un tournois'
+    },
+    title: 'Organisez votre propre tournois',
+    text: '',
+    id: 'tournoisOrga'
+  }, {
+    img: {
+      src: '/images/tournois-orga-250.png',
+      alt: "aide à l'organisation"
+    },
+    title: "Aide à l'organisation de tournois",
+    text: "Finis les feuilles de scores égarées et les tirages que l'on remet en cause",
+    id: 'tournoisHelp'
+  },{
+    img: {
+      src: '/images/megaphone-250.png',
+      alt: "partage sur les réseaux sociaux"
+    },
+    title: "Partagez la légende de vos hauts faits",
+    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
+    id: 'socialShare'
+  }, {
+    img: {
+      src: '/images/rewards-250.png',
+      alt: "Vos performances sont récompensées"
+    },
+    title: 'Vos performances sont récompensées',
+    text: 'goodies, achievements & leaderboard',
+    id: 'reward'
   }
 ];
