@@ -12,9 +12,11 @@ module.exports = React.createClass({
         data-visibility={visibility}
         >
         <div className="compat-subPage">
-              <div className="compat-siteTitle">
-                <h3>Trouvez un partenaire de jeux en quelques clics</h3>
-              </div>
+          <div className="compat-logoWrapperContainer">
+            <div className="compat-logoWrapper">
+              <img src="images/path4264-3-7.png"/>
+            </div>
+          </div>
         </div>
         <div className="compat-subPage">
       

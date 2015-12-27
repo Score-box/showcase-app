@@ -12,6 +12,7 @@ module.exports = React.createClass({render: function () {
       <div className='compat-subPage'>
         <div className="compat-siteTitle">
             <h1>SCORE BOX</h1>
+            <h3>L'app qui met tous vos scores dans votre poche</h3>
         </div>
       </div>
       <div className='compat-subPage'>
