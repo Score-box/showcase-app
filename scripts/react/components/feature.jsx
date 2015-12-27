@@ -11,11 +11,12 @@ var FeatureListClass = [
 var FeatureList = React.createClass({
   render: function () {
     var list = this.props.features.map( function (feature) {
-      return <FeatureItem key={feature.id} feature={feature}/>;
+        return <FeatureItem key={feature.id} feature={feature}/>;
     });
     return <div className={FeatureListClass}>{list}</div>;
   }
 });
+
 
 var FeatureItem = React.createClass({
   render: function () {
@@ -43,8 +44,6 @@ var FeatureItem = React.createClass({
           <div className='compat-subPage'>
             <div className='compat-feature-content'>
               <p>{feature.text}</p>
-              <p>{feature.textTwo}</p>
-              <p>{feature.textThree}</p>
             </div>
           </div>
 

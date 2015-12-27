@@ -2,39 +2,36 @@
 module.exports = [
   {
     img: {
-      src: '/images/earth-300x300.png',
-      alt: 'Ping Pong'
+      src: '/images/earth-250.png',
+      alt: 'réseau social'
     },
-    title: 'Partagez vos plus belles victoires !',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum nec purus id fringilla. Vestibulum eros felis, lobortis vitae est a, consectetur sollicitudin quam.',
-    textTwo: 'Ut non augue vitae sem lobortis tristique id at enim. Pellentesque pellentesque quam vel nunc sodales semper.',
-    id: 'whatever'
+    title: 'Trouvez un partenaire en quelques clics',
+    text: 'Quoi de plus frustrant que de ne pas avoir de partenaire pour pratiquer votre sport ou jeu préféré ? Scorebox vous permet de trouver un adversaire à votre niveau proche de chez vous et surtout disponible !',
+    id: 'réseau social'
   }, {
     img: {
-      src: '/images/megaphone-250.png',
-      alt: 'Ping Pong'
+      src: '/images/vs-250.png',
+      alt: 'défi'
     },
-    title: 'Géolocalisez vos adversaires !',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    textTwo: 'Suspendisse condimentum nec purus id fringilla. Vestibulum eros felis, lobortis vitae est',
-    textThree: 'Ut non augue vitae sem lobortis tristique id at enim. Pellentesque pellentesque quam vel nunc sodales semper.',
-    id: 'idem'
+    title: 'Défiez vos adversaires !',
+    text: 'Une fois votre future adversaire identifié, défiez-le pour une partie épique, à l’aube dans la petite clairière derrière le couvent en ruine à la date et dans le lieu qui vous conviennent.',
+    id: 'défi'
   }, {
     img: {
-      src: '/images/memory1.png',
+      src: '/images/memory1-250.png',
       alt: 'Ping Pong'
     },
-    title: 'Partagez vos plus belles victoires !',
-    text: 'Ajoutez une photo, commentez votre match et partagez le sur vos réseaux sociaux préférés.',
-    id: '3'
+    title: 'Jouez contre vos amis Facebook',
+    text: 'Envie de vous mesurer à l’élite sportive de votre cercle d’amis ? Bénéficiez de toutes les fonctionnalités de scorebox : aide à l’organisation, historique des parties, statistiques …',
+    id: 'facebook'
   }, {
     img: {
-      src: '/images/memory2.png',
-      alt: 'Ping Pong'
+      src: '/images/memory2-250.png',
+      alt: 'Historique'
     },
-    title: 'Géolocalisez vos adversaires !',
-    text: 'Trouvez un terrain, des groupes actifs, ou recherchez simplement votre adversaire du lendemain, la géolocalisation vous permet de trouver vos futurs adversaires en un clic !',
-    id: '4'
+    title: 'Historique personnel des rencontres ',
+    text: 'Vos victoires comme vos défaites sont enregistrés et restent accessible à vie sur votre profil. Vos exploits resteront gravés dans le marbre.',
+    id: 'Historique'
   }, {
     img: {
       src: '/images/rewards-250.png',
@@ -54,7 +51,7 @@ module.exports = [
   },
   {
     img: {
-      src: '/images/earth-300x300.png',
+      src: '/images/earth-250.png',
       alt: 'Ping Pong'
     },
     title: 'Partagez vos plus belles victoires !',
@@ -70,7 +67,7 @@ module.exports = [
     id: '8'
   }, {
     img: {
-      src: '/images/memory1.png',
+      src: '/images/memory1-250.png',
       alt: 'Ping Pong'
     },
     title: 'Partagez vos plus belles victoires !',
@@ -78,7 +75,7 @@ module.exports = [
     id: '9'
   }, {
     img: {
-      src: '/images/memory2.png',
+      src: '/images/memory2-250.png',
       alt: 'Ping Pong'
     },
     title: 'Géolocalisez vos adversaires !',
