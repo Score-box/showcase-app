@@ -5,6 +5,7 @@ var Footer = require('./components/footer.jsx');
 var Summary = require('./components/SummaryTogglable.jsx');
 var Cta = require('./components/Cta.jsx');
 var FEATURES = require('./content/featuresContent.json');
+var CATEGORIES = require('./content/categoriesList.json');
 
 
 var AppClass = [

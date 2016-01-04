@@ -1,0 +1,75 @@
+module.exports = [
+  {
+    title: "Quesako ?",
+    subTitle: "",
+    id: "intro",
+    icon: "",
+    backgroundColor: "red",
+    features: [
+      {
+        img: {
+          src: '/images/earth-250.png',
+          alt: 'réseau social'
+        },
+        title: 'Trouvez un partenaire en quelques clics',
+        text: 'Quoi de plus frustrant que de ne pas avoir de partenaire pour pratiquer votre sport ou jeu préféré ? Scorebox vous permet de trouver un adversaire à votre niveau proche de chez vous et surtout disponible !',
+        id: 'réseau social'
+      },
+      {
+        img: {
+          src: '/images/memory2-250.png',
+          alt: 'Historique'
+        },
+        title: 'Historique personnel des rencontres ',
+        text: 'Vos victoires comme vos défaites sont enregistrés et restent accessible à vie sur votre profil. Vos exploits resteront gravés dans le marbre.',
+        id: 'Historique'
+      },
+      {
+        img: {
+          src: '/images/multi-sport-250.png',
+          alt: 'multi sport'
+        },
+        title: 'Pour tous les sports et jeux !',
+        text: "Des Sports en équipes ou en 1 contre 1, aux jeux de plateaux en passant par les jeux de cartes, tout est permis. Que vous soyez amateurs de foot, afficionados du paintball, accro au street goolf ou mordu d'échec, scorebox est faite pour vous.",
+        id: 'multiSport'
+    },
+    {
+      img: {
+        src: '/images/no-euro-250.png',
+        alt: 'Freemium'
+      },
+      title: 'Un compagnon qui n’a pas de prix',
+      text: 'Pas d’abonnement premium, vous avez accès à toutes les fonctionnalités (individuelles) depuis votre compte gratuit.',
+      id: 'free'
+    },
+    {
+      img: {
+        src: '/images/no-liar-250.png',
+        alt: 'fairplay'
+      },
+      title: 'Le fairplay est garantie',
+      text: 'Vous avez un ami mauvais perdant qui tente, à grand renfort de mauvaise foi, de minimiser vos exploits ? Avec scorebox vous pourrez enfin lui faire admettre qu’il a perdu lors de vos 5 dernières parties.',
+      id: 'fairplay'
+    }
+    ]
+  }, {
+    title: "flow",
+    subTitle: "",
+    id: "flow",
+    icon: "",
+    backgroundColor: "blue",
+    features: [
+      
+    ]
+  }, {
+    title: "profile",
+    subTitle: "",
+    id: "profile",
+    icon: "",
+    backgroundColor: "green",
+    features: [
+      
+    ]
+  },
+  
+];
