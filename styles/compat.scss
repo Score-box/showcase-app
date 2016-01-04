@@ -171,6 +171,7 @@ img {
     height: $pPh;
     margin: 0 auto;
     overflow: hidden; //juste pour etre certain
+    .col-n-1 {}
   }
   .compat-page {
     width: $pPw;
@@ -184,6 +185,7 @@ img {
     height: $pLh;
     margin: 0 auto;
     overflow: hidden; //juste pour etre certain
+    .col-n-1 {}
   }
   .compat-page {
     width: pLw;
@@ -213,6 +215,7 @@ img {
     height: $pPh;
     margin: 0 auto;
     overflow: hidden; //juste pour etre certain
+    .col-n-1 {}
   }
   .compat-page {
     width: $pPw;
@@ -239,6 +242,8 @@ img {
     float: left;
     width: $pPw;
     height: $pPh;
+    .col-n-1 {}
+    .col-2-2 {}
   }
   .compat-page {
     width: $pPw;
@@ -264,6 +269,9 @@ img {
     float: left;
     width: $pPw;
     height: $pPh;
+    .col-n-1 {}
+    .col-3-2 {}
+    .col-3-3 {}
   }
   .compat-page {
     width: $pPw;
@@ -289,6 +297,10 @@ img {
     float: left;
     width: $pPw;
     height: $pPh;
+    .col-n-1 {}
+    .col-4-2 {}
+    .col-4-3 {}
+    .col-4-4 {}
   }
   .compat-page {
     width: $pPw;
@@ -302,9 +314,3 @@ img {
     vertical-align: middle;
   }
 }
-
-
-
-
-
-
