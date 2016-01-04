@@ -8,12 +8,12 @@ var FeatureListClass = [
   'compat-container'
 ].join(' ')
 
-var FeatureList = React.createClass({
+var CategoryFeatureList = React.createClass({
   render: function () {
-    var list = this.props.features.map( function (feature) {
-        return <FeatureItem key={feature.id} feature={feature}/>;
-    });
-    return <div className={FeatureListClass}>{list}</div>;
+    var featuresList = this.props.category.features.map( function (feature) {
+          return <FeatureItem key={feature.id} feature={feature}/>;
+        });
+    return <div className={FeatureListClass}>{featuresList}</div>;
   }
 });
 
@@ -34,10 +34,10 @@ var FeatureItem = React.createClass({
                 <div className="compat-feature-img">
                   <img src={R(feature.img.src)} alt={feature.img.alt}/>
                 </div>
+                <div className='compat-feature-title'>
+                  <h3>{feature.title}</h3>
+                </div>
               </div>
-            </div>
-            <div className='compat-feature-title'>
-              <h3>{feature.title}</h3>
             </div>
           </div>
 
@@ -53,4 +53,5 @@ var FeatureItem = React.createClass({
   }
 });
 
-module.exports=FeatureList;
+
+module.exports=CategoryFeatureList;

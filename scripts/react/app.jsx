@@ -1,3 +1,4 @@
+var CategoriesList = require('./components/categoriesList.jsx');
 var FeatureList = require('./components/feature.jsx');
 var Banner = require('./components/banner.jsx');
 var Menu = require('./components/menu.jsx');
@@ -109,8 +110,8 @@ var App = React.createClass({
               </div>
             </div>
           </div>
-        <div className="compat-containerWrapper" id="content">
-            <FeatureList features={FEATURES}/>
+         <div id="content">
+            <CategoriesList categories={CATEGORIES}/>
         </div>
         <div className="compat-containerWrapper" id="footer">
             <Footer/>
