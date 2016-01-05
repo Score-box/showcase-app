@@ -14,7 +14,7 @@ module.exports = React.createClass({
         <div className="compat-subPage">
           <div className="compat-logoWrapperContainer">
             <div className="compat-logoWrapper">
-              <img src="images/path4264-3-7.png"/>
+              <img src="/images/path4264-3-7.png"/>
             </div>
           </div>
         </div>
