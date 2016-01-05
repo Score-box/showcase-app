@@ -4,7 +4,7 @@ var Menu = require('./menu.jsx');
 var Footer = require('./footer.jsx');
 var Summary = require('./SummaryTogglable.jsx');
 var Cta = require('./Cta.jsx');
-var FEATURES = require('../content/featuresContent.json');
+var FEATURES = require('../content/featuresContent.js');
 
 
 var AppClass = [
