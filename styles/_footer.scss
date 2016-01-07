@@ -1,0 +1,27 @@
+#compat-container-wrapper-footer {
+  @media (min-width: $Container2Width + 1) {
+    background-color: $FooterBackgroundColor;
+    color: #ffffff;
+  }
+}
+#compat-page-wrapper-footer-infos {
+  @media (max-width: $Container2Width) {
+    background-color: $FooterBackgroundColor;
+    color: #ffffff;
+  }
+}
+#footer-infos-wrapper {
+  margin: auto;
+  width: auto;
+  display: inline-block;
+}
+.footer-infos-container {
+  width: $subPageWidth / 2 - 15px;
+  padding-left: 15px;
+  text-align:left;
+  float:left;
+  a {
+    color: orange;
+    text-decoration: none;
+  }
+}

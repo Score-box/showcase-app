@@ -1,39 +1,29 @@
-function urlify (url) {
-  return 'url(' + R(url) + ')';
-}
-
-var BannerClass = [
-  'compat-page'
-].join(' ')
+var Page = require('./compatPage.jsx');
+var CTA = require('./CTA.jsx');
+var Newsletter = CTA.newsletter;
+var Facebook = CTA.facebook;
 
 module.exports = React.createClass({render: function () {
   return (
-    <div className={BannerClass}>
-      <div className='compat-subPage'>
+    <div id="banner">
+      <Page id="title" className="col4-3">
         <div className="compat-siteTitle">
             <h1>SCORE BOX</h1>
-            <h3>L'app qui met tous vos scores dans votre poche</h3>
+            <h3>Lapp qui met tous vos scores dans votre poche</h3>
         </div>
-      </div>
-      <div className='compat-subPage'>
-          <div className="compat-fbContainer">
-            <div
-              className="fb-page"
-              data-href="https://www.facebook.com/scorebox42/"
-              data-width="300"
-              data-height="200"
-              data-small-header="false"
-              data-adapt-container-width="true"
-              data-hide-cover="true"
-              data-show-facepile="false">
-              <div className="fb-xfbml-parse-ignore">
-                <blockquote cite="https://www.facebook.com/scorebox42/">
-                  <a href="https://www.facebook.com/scorebox42/">Score Box</a>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-      </div>
+        <Facebook></Facebook>
+      </Page>
+      <Page id="CTA" className="col4-3">
+        <div id="compat-logo-wrapper">
+          <img src={R("/images/path4264-3-7.png")}/>
+        </div>
+        <Newsletter></Newsletter>
+      </Page>
+      <Page id="mock" className="col4-3">
+        <div id="compat-mock-wrapper">
+          <img src={R("/images/mockup-test.png")}/>
+        </div>
+      </Page>
     </div>
   );
 }});

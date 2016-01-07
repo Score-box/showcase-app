@@ -1,43 +1,59 @@
-var CTAClass = [
-  'compat-Cta',
-  'compat-page'
-].join(' ')
-
-module.exports = React.createClass({
-  render: function () {
-    var visibility = this.props.visible ? 'visible' : 'hidden'
-    return (
-      <div
-        className={CTAClass}
-        data-visibility={visibility}
-        >
-        <div className="compat-subPage">
-          <div className="compat-logoWrapperContainer">
-            <div className="compat-logoWrapper">
-              <img src="/images/path4264-3-7.png"/>
-            </div>
+module.exports = {
+  newsletter : React.createClass({
+    render: function () {
+      return (
+        <div id="compat-newsletterForm-wrapper">
+          <p>Inscrivez vous à la newsletter</p>
+          <div id="compat-newsletterForm-container">
+            <form
+              action="http://newsletter.scorebox.fr/"
+              method="POST"
+              target="_blank"
+            >
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+                className="compat-input"
+              ></input>
+              <input
+                type="submit"
+                className="compat-button"
+              ></input>
+              <input
+                type="checkbox"
+                required
+              ></input>
+              <p>Jaccepte de recevoir des informations sur scorebox</p>
+            </form>
           </div>
         </div>
-        <div className="compat-subPage">
-      
-          <div className="compat-CtaTitle">
-              <h4>Je veux etre averti de la date de lancement</h4>
-          </div>
-     
-          <div className="compat-formContainerWrapper">
-            <div className="compat-formContainer">
-              <form action="#" method="POST">
-                <fieldset>
-                <input type="email" id="email" placeholder="Email" required className="compat-input"></input>
-                </fieldset>
-                <fieldset>
-                <input type="submit" className="compat-button"></input>
-                </fieldset>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
       );
-  }
-})
+    }
+  }),
+  facebook: React.createClass({
+    render: function () {
+      return (
+        <div className="compat-fbContainer">
+          <p>Suivez nous sur facebook</p>
+          <div
+            className="fb-page"
+            data-href="https://www.facebook.com/scorebox42/"
+            data-width="300"
+            data-height="200"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="true"
+            data-show-facepile="false">
+            <div className="fb-xfbml-parse-ignore">
+              <blockquote cite="https://www.facebook.com/scorebox42/">
+                <a href="https://www.facebook.com/scorebox42/">Score Box</a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      );
+    }
+  })
+}

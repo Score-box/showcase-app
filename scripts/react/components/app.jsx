@@ -1,22 +1,23 @@
-var FeatureList = require('./feature.jsx');
+var Features = require('./features2.jsx');
 var Banner = require('./banner.jsx');
-var Menu = require('./menu.jsx');
-var Footer = require('./footer.jsx');
-var Summary = require('./SummaryTogglable.jsx');
-var Cta = require('./Cta.jsx');
-var FEATURES = require('../content/featuresContent.js');
+/*var Menu = require('./menu.jsx');
+*/var Footer = require('./footer.jsx');
+/*var Summary = require('./SummaryTogglable.jsx');
+var Cta = require('./Cta.jsx');*/
+var Container = require('./compatContainer.jsx');
+var FEATURES = require('../content/features.js');
 
 
 var AppClass = [
   'reactApp'
 ].join(' ');
 
-var ScrollerClass = [
+/*var ScrollerClass = [
 
-].join(' ');
+].join(' ');*/
 
 var App = React.createClass({
-  getInitialState: function () {
+  /*getInitialState: function () {
     var self = this;
     var pageList = [{
         name: 'Score Box',
@@ -86,35 +87,13 @@ var App = React.createClass({
     } else {
       return this.state.navList[this.state.currentPage + 1]
     }
-  },render:function () {
+  },*/render:function () {
     return (
       <div className={AppClass}>
-        <div className="compat-containerWrapper" id="banner">
-          <div className="compat-container">
-            <div className="compat-smallBanner">
-              <div className="compat-pageWrapper">
-                <Banner/>
-              </div>
-            </div>
-              <div className="compat-pageWrapper">
-                <Cta/>
-              </div>
-              <div className="compat-pageWrapper" id="compat-mockPageWrapper">
-                <div className="compat-page">
-                  <div className="compat-mockWrapper">
-                    <img src="/images/mockup-test.png"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        <div className="compat-containerWrapper" id="content">
-            <FeatureList features={FEATURES}/>
-        </div>
-        <div className="compat-containerWrapper" id="footer">
-            <Footer/>
-        </div>
-    </div>
+        <Container id="banner"><Banner/></Container>
+        <Features features={FEATURES}/>
+        <Container id="footer"><Footer/></Container>
+      </div>
     );
   }
 });

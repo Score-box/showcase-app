@@ -1,0 +1,77 @@
+.compat-container-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.compat-container {
+  margin: auto;
+  width: 100%;
+  @media (min-width: $Container2Width + 1) {
+    width: $Container2Width;
+  }
+  @media (min-width: $Container3Width + 1) {
+    width: $Container3Width;
+  }
+  @media (min-width: $Container4Width + 1) {
+    width: $Container4Width;
+  }
+}
+.compat-page-wrapper {
+  max-height: $PageHeight;
+  @media (max-width: $Container1Width) {
+    height:initial;
+  }
+  @media (max-width: $Container2Width) {
+    width: 100%;
+  }
+  @media (min-width: $Container2Width + 1) {
+    width:$PageWidth;
+    float: left;
+  }
+}
+.col2-1 {
+  @media (min-width: $Container2Width + 1) and (max-width: $Container3Width) {
+    width: $Container2Width;
+  }
+}
+.col3-2 {
+  @media (min-width: $Container3Width + 1) and (max-width: $Container4Width) {
+    width: $Container3Width / 2;
+  }
+}
+.col4-2 {
+  @media (min-width: $Container4Width + 1) {
+    width: $Container4Width / 2;
+  }
+}
+.col4-3 {
+  @media (min-width: $Container4Width + 1) {
+    width: $Container4Width / 3;
+  }
+}
+.compat-page {
+  margin: auto;
+  display:table;
+  @media (min-width: $Container1Width + 1) {
+    padding: $PagePadding;
+    max-height: $InnerPageHeight;
+    width: $InnerPageWidth;
+  }
+  @media (max-width: $Container1Width) {
+    padding: $PagePadding 0;
+    width:100%;
+    height:initial;
+  }
+}
+.compat-sub-page {
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  @media (min-width: $Container1Width + 1) {
+    width: $subPageWidth;
+    height: $subPageHeight;
+  }
+  @media (max-width: $Container1Width) {
+    width:100%;
+    height:initial;
+  }
+}

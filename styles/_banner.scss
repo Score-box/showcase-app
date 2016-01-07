@@ -1,0 +1,33 @@
+#compat-container-wrapper-banner {
+  @media (min-width: $Container2Width + 1) {
+    background-color: $BannerBackgroundColor;
+    color: #ffffff;
+  }
+}
+#compat-page-wrapper-title {
+  @media (max-width: $Container2Width) {
+    background-color: $BannerBackgroundColor;
+    color: #ffffff;
+  }
+}
+#compat-page-wrapper-mock {
+  @media (max-width: $Container3Width) {
+    display: none;
+  }
+}
+#compat-page-mock > .compat-sub-page {
+  overflow: visible;
+}
+#compat-mock-wrapper {
+  margin-top: 1/2 * $subPageHeight;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 300px;
+}
+#compat-logo-wrapper {
+  margin: 0 auto;
+  max-width: 200px;
+}
+#compat-logo-wrapper > img {
+  max-width: 100%;
+}
